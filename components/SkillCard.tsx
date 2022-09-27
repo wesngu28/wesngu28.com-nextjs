@@ -13,7 +13,7 @@ export default function SkillCard(props: Props) {
     }
 
     return (
-        <li className="bg-[#21222a] mt-2 mb-2 ml-4 mr-4 w-[225px] h-[450px] rounded-2xl">
+        <li className="bg-[#21222a] m-4 w-[225px] h-[450px] rounded-2xl">
             <div className={`h-[60%] grid ${grid}`}>
                 {props.images.map((arr, i) => {
                     return (
@@ -21,9 +21,8 @@ export default function SkillCard(props: Props) {
                     );
                 })}
             </div>
-            
-            <h2 className="mt-0 mb-2 text-2xl text-center">{props.name}</h2>
-            <p className="p-3 text-sm text-center">{props.desc}</p>
+            <h2 className="text-2xl text-center">{props.name}</h2>
+            <p className="p-2 mt-2 text-sm text-center">{props.desc}</p>
         </li>
     )
 }

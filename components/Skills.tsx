@@ -3,8 +3,8 @@ import SkillCard from './SkillCard'
 export default function Skills() {
     return (
         <div className="w-[80vw] mt-11">
-            <h1 className="ml-10 text-2xl p-2">Skills</h1>
-            <ul className="flex flex-wrap justify-center">
+            <h1 className="text-center text-2xl p-4 font-bold">Skills</h1>
+            <ul className="flex flex-wrap justify-center p-4">
                 <SkillCard images={['/skills/linux.svg', '/skills/git.svg', '/skills/docker.svg']} name={'Tools and Systems'} desc={'Operating systems and tools that change how we develop.'}/>
                 <SkillCard images={['/skills/html5.svg', '/skills/css3.svg', '/skills/bootstrap.svg', '/skills/sass.svg', '/skills/tailwind.svg']} name={'HTML and CSS'} desc={'The building blocks of the internet. CSS enhanced by Bootstrap, Sass, and Tailwind.'}/>
                 <SkillCard images={['/skills/js.svg', '/skills/ts.svg', 'skills/node.svg', '/skills/React.svg', '/skills/Svelte.svg', '/skills/next.svg']} name={'Javascript'} desc={'Javascript and its type-safe and server-side children, as well as frameworks to enhance its power.'}/>
