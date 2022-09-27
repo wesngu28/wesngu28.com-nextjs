@@ -2,9 +2,9 @@ import GameCard from './GameCard'
 
 export default function Games() {
     return (
-        <div className="w-[85vw] mt-11">
-            <h1 className="ml-10 text-2xl p-2">Games</h1>
-            <p className="ml-10 p-4 text-left text-xl leading-8 mb-4">These are just some games I like playing.</p>
+        <div className="w-[75vw] mt-11">
+            <h1 className="text-center text-2xl mb-0">Games</h1>
+            <p className="p-4 text-center text-xl">These are just some games I like playing.</p>
             <ul className="grid grid-cols-2 md:grid-cols-4">
                 <GameCard name={'Skyrim'} image={'https://cdn.akamai.steamstatic.com/steam/apps/489830/header.jpg?t=1650909796'} />
                 <GameCard name={'Hearts of Iron IV'} image={'https://cdn.akamai.steamstatic.com/steam/apps/394360/header.jpg?t=1661438345'} />
