@@ -23,7 +23,7 @@ export default function NowPlaying() {
     }
 
     return (
-        <div className='bg-[#292C33] w-max p-4 flex items-center justify-center m-auto'>
+        <div className='bg-[#292C33] w-max p-4 flex items-center justify-center'>
             <div className="w-72 flex flex-col">
                 <p className="text-center">{data ? (data.recent ? 'Recently Played on Spotify' : 'Currently Live on Spotify') : 'wamb' }</p>
                 <p className="mt-5 m-auto text-sm font-bold">PLAYING FROM ALBUM</p>

@@ -1,6 +1,6 @@
 export default function Specs() {
     return (
-        <section className="mt-11 mb-11 flex justify-center items-center bg-[#1F2022] ml-4 mr-4 w-[75vw] rounded-3xl">
+        <section className="mt-11 flex justify-center items-center bg-[#1F2022] ml-4 mr-4 w-[75vw] rounded-3xl">
             <div className="p-4 w-[75vw]">
                 <h1 className="text-center text-3xl">
                     my systems
@@ -15,7 +15,7 @@ export default function Specs() {
                     Android PC: <p className="text-blue-300 ml-4 inline-block">Dell Optiplex 3040 (BlissOS)</p>
                 </p>
                 <p className="p-4 text-left text-xl leading-8">
-                    General PC: <p className="text-blue-300 ml-4 inline-block">Windows 11</p>
+                    General PC: <p className="text-blue-300 ml-4 inline-block">Windows 10</p>
                     <ul className="list-disc">
                         <li className="ml-10">CPU:  &nbsp; Ryzen 7 5600x</li>
                         <li className="ml-10">Motherboard:  &nbsp; MSI B450 Tomahawk</li>
