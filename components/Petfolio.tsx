@@ -14,7 +14,7 @@ export default function Petfolio() {
                                 <p className="text-center font-bold">Cami</p>
                                 <p>Chihuahua-Dachshund mix (chiwenie)</p>
                             </li>
-                            <Slideshow photos={['skills/git.svg']} />
+                            <Slideshow photos={['skills/git.svg', 'grotesque.jpeg']} />
                         </ul>
                         <ul className="mt-4 p-4">
                             <li>
