@@ -5,17 +5,17 @@ export default function Specs() {
                 <h1 className="text-center text-3xl">
                     my systems
                 </h1>
-                <p className="p-4 text-left text-xl leading-8">
-                    Laptop: <p className="text-green-300 ml-4 inline-block">HP Pavillion 15z-cw100 (openSuse Tumbleweed)</p>
-                </p>
-                <p className="p-4 text-left text-xl leading-8">
-                    Development PC: <p className="text-sky-300 ml-4 inline-block">Dell Optiplex 3040 (Zorin)</p>
-                </p>
-                <p className="p-4 text-left text-xl leading-8">
-                    Android PC: <p className="text-blue-300 ml-4 inline-block">Dell Optiplex 3040 (BlissOS)</p>
-                </p>
-                <p className="p-4 text-left text-xl leading-8">
-                    General PC: <p className="text-blue-300 ml-4 inline-block">Windows 10</p>
+                <div className="p-4 text-left text-xl leading-8">
+                    <p>Laptop: <span className="text-green-300 ml-4 inline-block">HP Pavillion 15z-cw100 (openSuse Tumbleweed)</span></p>
+                </div>
+                <div className="p-4 text-left text-xl leading-8">
+                    <p>Development PC: <span className="text-sky-300 ml-4 inline-block">Dell Optiplex 3040 (Zorin)</span></p>
+                </div>
+                <div className="p-4 text-left text-xl leading-8">
+                    <p>Android PC: <span className="text-blue-300 ml-4 inline-block">Dell Optiplex 3040 (BlissOS)</span></p>
+                </div>
+                <div className="p-4 text-left text-xl leading-8">
+                    <p>General PC: <span className="text-blue-300 ml-4 inline-block">Windows 10</span></p>
                     <ul className="list-disc">
                         <li className="ml-10">CPU:  &nbsp; Ryzen 7 5600x</li>
                         <li className="ml-10">Motherboard:  &nbsp; MSI B450 Tomahawk</li>
@@ -32,27 +32,28 @@ export default function Specs() {
                         <li className="ml-10">Power Supply:  &nbsp; EVGA 210-GQ 850W 80+ Gold Semi-modular</li>
                         <li className="ml-10">Case:  &nbsp; NZXT H500</li>
                     </ul>
-                </p>
-                <p className="p-4 text-left text-xl leading-8">
-                    Displays
+                </div>
+                <div className="p-4 text-left text-xl leading-8">
+                    <p>Displays</p>
                     <ul>
                         <li className="ml-10">1.  &nbsp; Alienware 3423dw</li>
                         <li className="ml-10">2:  &nbsp; Acer XV272U</li>
                         <li className="ml-10">3:  &nbsp; LG 27MP35HQ</li>
+                        <li className="ml-10">4:  &nbsp; Wixamit 10.1 inch</li>
                     </ul>
-                </p>
-                <p className="p-4 text-left text-xl leading-8">
-                    Home Server: <p className="text-red-300 ml-4 inline-block">Dell Precision 5810 Debian</p>
-                </p>
-                <p className="p-4 text-left text-xl leading-8">
-                    Mobile Devices
+                </div>
+                <div className="p-4 text-left text-xl leading-8">
+                    <p>Home Server: <span className="text-red-300 ml-4 inline-block">Dell Precision 5810 Debian</span></p>
+                </div>
+                <div className="p-4 text-left text-xl leading-8">
+                    <p>Mobile Devices</p>
                     <ul className="list-disc">
                         <li className="ml-10">Phone:  &nbsp; OnePlus 9 Pro</li>
                         <li className="ml-10">Tablet:  &nbsp; Samsung Galaxy Tab S7</li>
                     </ul>
-                </p>
-                <p className="p-4 text-left text-xl leading-8">
-                    Accessories
+                </div>
+                <div className="p-4 text-left text-xl leading-8">
+                    <p>Accessories</p>
                     <ul className="list-disc">
                         <li className="ml-10">Router:  &nbsp; Dell Optiplex 5010 pfSense</li>
                         <li className="ml-10">WAP:  &nbsp; Tp-Link EAP610, Ubiquity Long Range</li>
@@ -76,7 +77,7 @@ export default function Specs() {
                         </li>
                         <li className="ml-10">Speakers:  &nbsp; Logitech-X-530 5.1</li>
                     </ul>
-                </p>
+                </div>
             </div>
         </section>
     )

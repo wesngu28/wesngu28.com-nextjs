@@ -36,7 +36,6 @@ export default async (_: NextApiRequest, res: NextApiResponse) => {
             },
         })
         const artistResult = await search.json()
-        console.log(artistResult)
         monthlyArtists.push({
             name: monthlyArtistsName[i].name,
             playcount: monthlyArtistsName[i].playcount,

@@ -19,7 +19,7 @@ export default function SkillCard(props: Props) {
             <div className={`relative h-[60%] grid ${grid}`}>
                 {props.images.map((arr, i) => {
                     return (
-                        <div className="m-2 relative">
+                        <div key={arr} className="m-2 relative">
                             <Image src={`/${arr}`} objectFit="contain" layout="fill"/>
                         </div>
                     );

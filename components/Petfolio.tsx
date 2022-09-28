@@ -7,7 +7,7 @@ export default function Petfolio() {
                 <h1 className="text-center text-3xl">
                     meet my dogs
                 </h1>
-                <p className="p-4 text-left text-xl leading-8 mb-4">
+                <div className="p-4 text-left text-xl leading-8 mb-4">
                     <div className="flex flex-col">
                         <ul className="mt-4 p-4">
                             <li>
@@ -24,7 +24,7 @@ export default function Petfolio() {
                             <Slideshow photos={['dog/xena1.jpg', 'dog/xena2.jpg', 'dog/xena3.jpg', 'dog/xena4.jpg', 'dog/xena5.jpg', 'dog/xena6.jpg']} />
                         </ul>
                     </div>
-                </p>
+                </div>
             </div>
         </section>
     )

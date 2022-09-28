@@ -18,7 +18,7 @@ export default function ProjectCard({techs, image, name, desc, url}: Props) {
                 <ul className={'flex mt-2 justify-center flex-wrap'}>
                     {techs.map((arr, i) => {
                         return (
-                            <li className="m-2 p-1 bg-[beige] text-black rounded-lg">
+                            <li key={arr} className="m-2 p-1 bg-[beige] text-black rounded-lg">
                                 <p>{arr}</p>
                             </li>
                         );
