@@ -31,8 +31,8 @@ export default function NowPlaying() {
                 <p className="m-auto mb-11">
                     {data ? trimText(data.album) : 'Getting album...'}
                 </p>
-                <a target="_blank" href={data ? data.songUrl : ''} rel="noopener noreferrer">
-                    <Image className="m-auto mb-11" alt={`album cover of ${data ? data.album : 'loading album'}}`}src={data ? data.albumImageUrl : '/spotify.svg'} width={'300px'} height={'300px'}/>
+                <a className="m-auto mb-11" target="_blank" href={data ? data.songUrl : ''} rel="noopener noreferrer">
+                    <Image alt={`album cover of ${data ? data.album : 'loading album'}}`}src={data ? data.albumImageUrl : '/spotify.svg'} width={'300px'} height={'300px'}/>
                 </a>
                 <p className="text-left font-bold">{data ? data.title : 'Getting title...'}</p>
                 <p>{data ? data.artist : 'Getting artists...'}</p>
