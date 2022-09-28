@@ -17,7 +17,7 @@ export default function ArtistCard() {
     }
 
     const { data, error } = useSWR('/api/lastfm', swrFetch, {
-        revalidateOnFocus: false, refreshInterval: 86400000
+        revalidateOnFocus: false, refreshInterval: 300000
     });
 
     if (error) console.log(error)
