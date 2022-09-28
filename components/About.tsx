@@ -1,10 +1,7 @@
 import Link from "next/link";
 import Image from "next/image"
 import me from "../public/grotesque.jpeg"
-import github from "../public/github.svg"
-import linkedin from "../public/linkedin.svg"
-import email from "../public/email.svg"
-import resume from "../public/resume.png"
+import NavLink from "./NavLink";
 
 interface Props {
     header: string;
@@ -37,30 +34,10 @@ export default function About({ header, paragraph1, paragraph2, destination }: P
                     <Image className="p-4 rounded-full mx-auto object-cover" alt="photo of me" src={me} />
                 </div>
                 <ul className="list-none flex flex-wrap items-center justify-center">
-                    <li className="rounded-lg flex justify-center w-min items-center m-2 p-4 bg-[#D3D3D3]">
-                        <div className="w-6 h-6 mr-2">
-                            <Image className="box-border object-cover" alt="github logo" src={github} />
-                        </div>
-                        <a target="_blank" href="https://github.com/wesngu28" rel="noopener noreferrer" className="text-black text-xl hover:underline">wesngu28</a>
-                    </li>
-                    <li className="rounded-lg flex justify-center w-min items-center m-2 p-4 bg-[#D3D3D3]">
-                        <div className="w-6 h-6 mr-2">
-                            <Image className="box-border object-cover" alt="linkedin logo" src={linkedin} />
-                        </div>
-                        <a target="_blank" href="https://www.linkedin.com/in/wesngu28/" rel="noopener noreferrer" className="text-black text-xl hover:underline">wesngu28</a>
-                    </li>
-                    <li className="rounded-lg flex justify-center w-min items-center m-2 p-4 bg-[#D3D3D3]">
-                        <div className="w-6 h-6 mr-2">
-                            <Image className="box-border object-cover" alt="email icon" src={email} />
-                        </div>
-                        <p title="this should be wesngu28 why is there a 0" className="text-black text-lg hover:underline">wesngu028@gmail.com</p>
-                    </li>
-                    <li className="rounded-lg flex justify-center w-min items-center m-2 p-4 bg-[#D3D3D3]">
-                        <div className="w-6 h-6 mr-2">
-                            <Image className="box-border object-cover" alt="paper emoji" src={resume} />
-                        </div>
-                        <a target="_blank" href="https://wesngu28.github.io/resume/" rel="noopener noreferrer" className="text-black text-lg hover:underline">resume</a>
-                    </li>
+                    <NavLink imgName="github" url="https://www.github.com/wesngu28" />
+                    <NavLink imgName="linkedin" url="https://www.linkedin.com/in/wesngu28/" />
+                    <NavLink imgName="email" url="" />
+                    <NavLink imgName="resume" url="https://wesngu28.github.io/resume/" />
                 </ul>
             </div>
         </div>
