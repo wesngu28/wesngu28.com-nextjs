@@ -2,6 +2,17 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { getAccessToken } from '../../helper/access'
 
+interface spotifyArtist {
+    external_urls: {
+        spotify: string;
+    },
+    href: string;
+    id: string;
+    name: string;
+    type: string;
+    url: string;
+}
+
 export const getCurrentSong = async () => {
     const { access_token } = await getAccessToken()
 
@@ -29,7 +40,8 @@ const Spotify = async (req: NextApiRequest, res: NextApiResponse) => {
         const recentSongs = await response.json()
         const song = recentSongs.items[Math.floor(Math.random() * recentSongs.items.length)];
         const title = song.track.name
-        const artist = song.track.artists.map((_artist) => _artist.name).join(', ')
+        console.log(song.track.artists)
+        const artist = song.track.artists.map((_artist: spotifyArtist) => _artist.name).join(', ')
         const album = song.track.album.name
         const albumImageUrl = song.track.album.images[0].url
         const songUrl = song.track.external_urls.spotify

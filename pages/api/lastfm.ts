@@ -12,12 +12,24 @@ interface Artist {
     img: string;
 }
 
+interface topArtist {
+    streamable: string;
+    image: [];
+    mbid: string;
+    url: string;
+    playcount: string;
+    attr: {
+        rank: string;
+    };
+    name: string;
+}
+
 const lastFM = async (_: NextApiRequest, res: NextApiResponse) => {
 
     const response = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=scrambledeggdog&period=1month&limit=8&api_key=${lastfmKey}&format=json`)
     const artists = await response.json()
 
-    const monthlyArtistsName = artists.topartists.artist.map((artist) => {
+    const monthlyArtistsName = artists.topartists.artist.map((artist: topArtist) => {
         return {
             name: artist.name,
             playcount: artist.playcount,
