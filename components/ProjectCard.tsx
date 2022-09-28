@@ -3,15 +3,16 @@ interface Props {
     image: string;
     name: string;
     desc: string;
+    url: string;
 }
 
-export default function ProjectCard(props: Props) {
+export default function ProjectCard({techs, image, name, desc, url}: Props) {
     return (
         <li className="p-4 bg-[#21222a] m-4 inline-block">
-            <img src={props.image} />
+            <a target="_blank" href={url} rel="noopener noreferrer"><img src={image} /></a>
             <div className={`pr-2 pl-2`}>
                 <ul className={'flex mt-2 justify-center flex-wrap'}>
-                    {props.techs.map((arr, i) => {
+                    {techs.map((arr, i) => {
                         return (
                             <li className="m-2 p-1 bg-[beige] text-black rounded-lg">
                                 <p>{arr}</p>
@@ -19,8 +20,8 @@ export default function ProjectCard(props: Props) {
                         );
                     })}
                 </ul>
-                <h2 className="m-2 text-center font-bold text-lg">{props.name}</h2>
-                <p>{props.desc}</p>
+                <a target="_blank" href={url} rel="noopener noreferrer"><h2 className="hover:underline m-2 text-center font-bold text-lg">{name}</h2></a>
+                <p>{desc}</p>
             </div>
         </li>
     )

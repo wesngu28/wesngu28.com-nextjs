@@ -4,26 +4,30 @@ import GameInfo from "./GameInfo";
 interface Props {
     image: string;
     name: string;
-    dropdown?: boolean;
+    url: string;
 }
 
-export default function GameCard(props: Props) {
+export default function GameCard({image, name, url}: Props) {
+
+    const openNewTab = (gameUrl: string) => {
+        window.open(gameUrl, '_blank', 'noopener,noreferrer');
+      };
 
     const [moreInfo, setMoreInfo] = useState(false)
 
     return (
         <>
             <li className="bg-[#21222a] m-1 inline-block border-b-4">
-                <div className="peer hover:scale-125 z-10 ease-out">
+                <div onClick={() => openNewTab(url)} className="peer hover:scale-125 hover:cursor-pointer z-10 ease-out">
                     <img
                         onMouseEnter={() => setMoreInfo(true)}
                         onMouseLeave={() => setMoreInfo(false)}
-                        className="w-full" src={props.image} title={props.name} />
+                        className="w-full" src={image} title={name} />
                 </div>
                 <div className="absolute left-1/2 opacity-0 peer-hover:opacity-100 transition-opacity duration-500">
                     {moreInfo && (
                         <div className="relative bg-[#6E644E] rounded-3xl mt-11 p-4 -left-1/2 top-6 w-screen md:w-full">
-                            <GameInfo name={props.name} />
+                            <GameInfo name={name} />
                         </div>
                     )}
                 </div>

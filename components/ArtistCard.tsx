@@ -18,8 +18,8 @@ export default function ArtistCard() {
             <ul className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 h-max"> 
                 {data ? data.monthlyArtists.map((arr) => {
                     return (
-                        <li className="m-2 p-1 bg-[beige] text-black rounded-lg">
-                            <img src={arr.url} title={`${arr.name}`} />
+                        <li className="flex justify-center items-center m-2 p-1 bg-[beige] text-black rounded-lg">
+                            <a target="_blank" href={arr.href} rel="noopener noreferrer"><img className="m-auto" src={arr.img} title={`${arr.name} - ${arr.playcount} plays`} /></a>
                         </li>
                     );
                 }) : 'Loading top artists...'}
