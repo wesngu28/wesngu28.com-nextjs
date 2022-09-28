@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface Props {
     images: string[];
     name: string;
@@ -14,10 +16,12 @@ export default function SkillCard(props: Props) {
 
     return (
         <li className="bg-[#21222a] m-4 w-[225px] h-[450px] rounded-2xl">
-            <div className={`h-[60%] grid ${grid}`}>
+            <div className={`relative h-[60%] grid ${grid}`}>
                 {props.images.map((arr, i) => {
                     return (
-                        <img className="h-[inherit] m-auto" key={i} src={arr} />
+                        <div className="m-2 relative">
+                            <Image src={`/${arr}`} objectFit="contain" layout="fill"/>
+                        </div>
                     );
                 })}
             </div>

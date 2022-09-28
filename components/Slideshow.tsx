@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState } from "react";
 
 interface Props {
@@ -23,7 +24,14 @@ export default function Slideshow(props: Props) {
             <p onClick={decrementImage} className="text-6xl text-[#6E6E6E]">&#8592;</p>
             {props.photos.map((arr: string, i: number) => {
                 return (
-                    active === i ? <img className="object-cover w-[350px] md:w-full h-[350px] sm:h-80 m-auto" key={i} src={arr}/> : <img className="w-[75%] m-auto hidden" key={i} src={arr} />
+                    active === i ? 
+                        <div className="w-[350px] md:w-full h-[350px] sm:h-80 m-auto relative">
+                            <Image objectFit="cover" layout="fill" key={i} src={`/${arr}`}/> 
+                        </div>
+                        : 
+                        <div className="w-[350px] md:w-full h-[350px] sm:h-80 m-auto relative hidden">
+                            <Image objectFit="cover" layout="fill" key={i} src={`/${arr}`} />
+                        </div>
                 );
             })}
             <p onClick={incrementImage} className="text-6xl text-[#6E6E6E]">&#8594;</p>

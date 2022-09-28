@@ -1,3 +1,13 @@
+import Image from 'next/image';
+import skyrim from '../public/games/Skyrim.png'
+import hoi4 from '../public/games/hoi4.png'
+import sap from '../public/games/SAP.png'
+import league from '../public/games/League.png'
+import sc2 from '../public/games/SC2.png'
+import civ from '../public/games/civfive.png'
+import ak from '../public/games/Arknights.png'
+import al from '../public/games/Azur.png'
+
 interface Props {
     name: string;
 }
@@ -8,7 +18,7 @@ export default function GameInfo(props: Props) {
             <>
                 <p>I've only ever finished this game once, as a Redguard sneak archer</p>
                 <p className="mb-5">(because how else can you play a Bethesda rpg).</p>
-                <img src="/games9-23/Skyrim.png" />
+                <Image src={skyrim} />
 
                 <table className="m-auto w-full">
                     <caption className="mb-5 font-bold">Elder Scrolls Favorites</caption>
@@ -53,49 +63,37 @@ export default function GameInfo(props: Props) {
     }
     if (props.name === 'Hearts of Iron IV') {
         return (
-            <>
-                <img src="/games9-23/hoi4.png" />
-            </>
+            <Image src={hoi4} />
         )
     }
     if (props.name === 'Super Auto Pets') {
         return (
-            <>
-                <img src="/games9-23/SAP.png" />
-            </>
+            <Image src={sap} />
         )
     }
     if (props.name === 'League of Legends') {
         return (
-            <img src="/games9-23/League.png" />
+            <Image className="z-50" src={league} />
         )
     }
     if (props.name === 'Starcraft II') {
         return (
-            <>
-                <img src="/games9-23/SC2.png" />
-            </>
+            <Image src={sc2} />
         )
     }
     if (props.name === 'Civilization V') {
         return (
-            <>
-                <img src="/games9-23/civfive.png" />
-            </>
+            <Image src={civ} />
         )
     }
     if (props.name === 'Arknights') {
         return (
-            <>
-                <img src="/games9-23/Arknights.png" />
-            </>
+            <Image src={ak} />
         )
     }
     if (props.name === 'Azur Lane') {
         return (
-            <>
-                <img src="/games9-23/Azur.png" />
-            </>
+            <Image src={al} />
         )
     }
     return (

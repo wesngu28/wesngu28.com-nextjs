@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import useSWR from 'swr';
 
 export default function NowPlaying() {
@@ -30,7 +31,7 @@ export default function NowPlaying() {
                 <p className="m-auto mb-11">
                     {data ? trimText(data.album) : 'Getting album...'}
                 </p>
-                <a target="_blank" href={data ? data.songUrl : ''} rel="noopener noreferrer"><img className="m-auto mb-11" src={data ? data.albumImageUrl : 'spotify.svg'} /></a>
+                <a target="_blank" href={data ? data.songUrl : ''} rel="noopener noreferrer"><Image className="m-auto mb-11" src={data ? data.albumImageUrl : '/spotify.svg'} width={'300px'} height={'300px'}/></a>
                 <p className="text-left font-bold">{data ? data.title : 'Getting title...'}</p>
                 <p>{data ? data.artist : 'Getting artists...'}</p>
             </div>

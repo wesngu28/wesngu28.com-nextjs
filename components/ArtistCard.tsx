@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import useSWR from 'swr';
 
 export default function ArtistCard() {
@@ -19,7 +20,7 @@ export default function ArtistCard() {
                 {data ? data.monthlyArtists.map((arr) => {
                     return (
                         <li className="flex justify-center items-center m-2 p-1 bg-[beige] text-black rounded-lg">
-                            <a target="_blank" href={arr.href} rel="noopener noreferrer"><img className="m-auto" src={arr.img} title={`${arr.name} - ${arr.playcount} plays`} /></a>
+                            <a target="_blank" href={arr.href} rel="noopener noreferrer"><Image className="m-auto" src={arr.img} title={`${arr.name} - ${arr.playcount} plays`} width={'160px'} height={'160px'}/></a>
                         </li>
                     );
                 }) : 'Loading top artists...'}

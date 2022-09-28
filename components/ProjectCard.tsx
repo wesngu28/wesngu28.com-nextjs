@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface Props {
     techs: string[];
     image: string;
@@ -9,7 +11,9 @@ interface Props {
 export default function ProjectCard({techs, image, name, desc, url}: Props) {
     return (
         <li className="p-4 bg-[#21222a] m-4 inline-block">
-            <a target="_blank" href={url} rel="noopener noreferrer"><img src={image} /></a>
+            <a className="m-auto" target="_blank" href={url} rel="noopener noreferrer">
+                <Image src={`/${image}`} width={'1000px'} height={'500px'}/>
+            </a>
             <div className={`pr-2 pl-2`}>
                 <ul className={'flex mt-2 justify-center flex-wrap'}>
                     {techs.map((arr, i) => {

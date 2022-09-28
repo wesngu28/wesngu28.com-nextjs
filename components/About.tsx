@@ -1,14 +1,19 @@
 import Link from "next/link";
+import Image from "next/image"
+import me from "../public/grotesque.jpeg"
+import github from "../public/github.svg"
+import linkedin from "../public/linkedin.svg"
+import email from "../public/email.svg"
+import resume from "../public/resume.png"
 
 interface Props {
     header: string;
     paragraph1: string;
     paragraph2?: string;
-    img: string;
     destination: string;
 }
 
-export default function About({ header, paragraph1, paragraph2, img, destination }: Props) {
+export default function About({ header, paragraph1, paragraph2, destination }: Props) {
     return (
         <div className="mt-11 md:flex justify-center items-center p-4 bg-[#1F2022] w-[75vw] rounded-3xl">
             <div className="p-4 w-[55vw] m-auto">
@@ -25,23 +30,33 @@ export default function About({ header, paragraph1, paragraph2, img, destination
                     <a className="p-4 text-left text-xl leading-8 hover:underline">{destination === '/' ? 'Return home' : 'Even more about me'}</a>
                 </Link>
             </div>
-            <div className="flex flex-col">
-                <img className="p-4 rounded-full mx-auto w-3/5" src={img} />
+            <div className="flex flex-col items-center">
+                <div className="w-3/5">
+                    <Image className="p-4 rounded-full mx-auto object-cover" src={me} />
+                </div>
                 <ul className="list-none flex flex-wrap items-center justify-center">
                     <li className="rounded-lg flex justify-center w-min items-center m-2 p-4 bg-[#D3D3D3]">
-                        <img className="box-border w-6 h-6 mr-2" src="/github.svg" />
+                        <div className="w-6 h-6 mr-2">
+                            <Image className="box-border object-cover" src={github} />
+                        </div>
                         <a target="_blank" href="https://github.com/wesngu28" rel="noopener noreferrer" className="text-black text-xl hover:underline">wesngu28</a>
                     </li>
                     <li className="rounded-lg flex justify-center w-min items-center m-2 p-4 bg-[#D3D3D3]">
-                        <img className="box-border h-6 w-6 mr-2" src="/linkedin.svg" />
+                        <div className="w-6 h-6 mr-2">
+                            <Image className="box-border object-cover" src={linkedin} />
+                        </div>
                         <a target="_blank" href="https://www.linkedin.com/in/wesngu28/" rel="noopener noreferrer" className="text-black text-xl hover:underline">wesngu28</a>
                     </li>
                     <li className="rounded-lg flex justify-center w-min items-center m-2 p-4 bg-[#D3D3D3]">
-                        <img className="box-border h-6 w-6 mr-2" src="/email.svg" />
+                        <div className="w-6 h-6 mr-2">
+                            <Image className="box-border object-cover" src={email} />
+                        </div>
                         <p title="this should be wesngu28 why is there a 0" className="text-black text-lg hover:underline">wesngu028@gmail.com</p>
                     </li>
                     <li className="rounded-lg flex justify-center w-min items-center m-2 p-4 bg-[#D3D3D3]">
-                        <img className="box-border h-6 w-6 mr-2" src="/resume.png" />
+                        <div className="w-6 h-6 mr-2">
+                            <Image className="box-border object-cover" src={resume} />
+                        </div>
                         <a target="_blank" href="https://wesngu28.github.io/resume/" className="text-black text-lg hover:underline">resume</a>
                     </li>
                 </ul>
