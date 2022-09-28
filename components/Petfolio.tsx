@@ -19,7 +19,7 @@ export default function Petfolio() {
                         <ul className="mt-4 p-4">
                             <li>
                                 <p className="text-center font-bold">Xena</p>
-                                <p className="text-center">Multi-mix Labrador</p>
+                                <p className="text-center">Mixed Labrador</p>
                             </li>
                             <Slideshow photos={['dog/xena1.jpg', 'dog/xena2.jpg', 'dog/xena3.jpg', 'dog/xena4.jpg', 'dog/xena5.jpg', 'dog/xena6.jpg']} />
                         </ul>
