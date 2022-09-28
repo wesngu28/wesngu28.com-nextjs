@@ -6,14 +6,14 @@ export default function Games() {
             <h1 className="text-center text-2xl mb-0">Games</h1>
             <p className="p-4 text-center text-xl">These are just some games I like playing.</p>
             <ul className="grid grid-cols-2 md:grid-cols-4">
-                <GameCard name={'Skyrim'} image={'/gamecover/skyrim.jpg'} url={'https://elderscrolls.bethesda.net/en/skyrim'} />
-                <GameCard name={'Hearts of Iron IV'} image={'/gamecover/hoi4.jpg'} url={'https://www.paradoxinteractive.com/games/hearts-of-iron-iv/about'} />
-                <GameCard name={'Super Auto Pets'} image={'/gamecover/sap.jpg'} url={'https://teamwoodgames.com/'} />
-                <GameCard name={'League of Legends'} image={'/gamecover/league.png'} url={'https://www.leagueoflegends.com/en-us/'} />
-                <GameCard name={'Starcraft II'} image={'/gamecover/sc2.jpg'} url={'https://starcraft2.com/en-us/'} />
-                <GameCard name={'Civilization V'} image={'/gamecover/civ.jpg'} url={'https://civilization.com/civilization-5/'} />
-                <GameCard name={'Arknights'} image={'/gamecover/arknights.jpg'} url={'https://www.arknights.global/'} /> 
-                <GameCard name={'Azur Lane'} image={'/gamecover/azur-logo.jpg'} url={'https://azurlane.yo-star.com/#/'} />
+                <GameCard name={'Skyrim'} image={'/gamecover/skyrim.jpg'} url={'https://elderscrolls.bethesda.net/en/skyrim'} imgName='skyrim' />
+                <GameCard name={'Hearts of Iron IV'} image={'/gamecover/hoi4.jpg'} url={'https://www.paradoxinteractive.com/games/hearts-of-iron-iv/about'} imgName='hoi4' />
+                <GameCard name={'Super Auto Pets'} image={'/gamecover/sap.jpg'} url={'https://teamwoodgames.com/'} imgName='sap' />
+                <GameCard name={'League of Legends'} image={'/gamecover/league.png'} url={'https://www.leagueoflegends.com/en-us/'} imgName='lol' />
+                <GameCard name={'Starcraft II'} image={'/gamecover/sc2.jpg'} url={'https://starcraft2.com/en-us/'} imgName='sc2' />
+                <GameCard name={'Civilization V'} image={'/gamecover/civ.jpg'} url={'https://civilization.com/civilization-5/'} imgName='civ' />
+                <GameCard name={'Arknights'} image={'/gamecover/arknights.jpg'} url={'https://www.arknights.global/'} imgName='ak' /> 
+                <GameCard name={'Azur Lane'} image={'/gamecover/azur-logo.jpg'} url={'https://azurlane.yo-star.com/#/'} imgName='al'/>
             </ul>
         </div>
     )
