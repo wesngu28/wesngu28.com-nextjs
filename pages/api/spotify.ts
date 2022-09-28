@@ -40,7 +40,6 @@ const Spotify = async (req: NextApiRequest, res: NextApiResponse) => {
         const recentSongs = await response.json()
         const song = recentSongs.items[Math.floor(Math.random() * recentSongs.items.length)];
         const title = song.track.name
-        console.log(song.track.artists)
         const artist = song.track.artists.map((_artist: spotifyArtist) => _artist.name).join(', ')
         const album = song.track.album.name
         const albumImageUrl = song.track.album.images[0].url
