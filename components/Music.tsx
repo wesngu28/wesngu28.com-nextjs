@@ -8,7 +8,7 @@ export default function Music() {
             <NowPlaying />
             <ul className="flex flex-wrap justify-center">
                 <div>
-                    <p className="text-center mb-5">My Top Artists This Month</p>
+                    <p className="text-center mt-11 mb-5">My Top Artists This Month</p>
                     <ArtistCard />
                 </div>
             </ul>

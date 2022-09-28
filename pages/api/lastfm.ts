@@ -7,7 +7,9 @@ const {
 
 interface Artist {
     name: string;
-    url: string;
+    playcount: number;
+    href: string;
+    img: string;
 }
 
 export default async (_: NextApiRequest, res: NextApiResponse) => {
@@ -15,17 +17,18 @@ export default async (_: NextApiRequest, res: NextApiResponse) => {
     const response = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=scrambledeggdog&period=1month&limit=8&api_key=${lastfmKey}&format=json`)
     const artists = await response.json()
 
-    console.log(artists.topartists.artist)
-
     const monthlyArtistsName = artists.topartists.artist.map((artist) => {
-        return `${artist.name} - ${artist.playcount} plays`
+        return {
+            name: artist.name,
+            playcount: artist.playcount,
+        }
     })
 
     const { access_token } = await getAccessToken()
 
     const monthlyArtists: Array<Artist> = [];
     for (let i = 0; i < monthlyArtistsName.length; i++) {
-        const search = await fetch(`https://api.spotify.com/v1/search?q=${monthlyArtistsName[i]}&type=artist&limit=1`, {
+        const search = await fetch(`https://api.spotify.com/v1/search?q=${monthlyArtistsName[i].name}&type=artist&limit=1&locale=en-US`, {
             headers: {
                 Authorization: `Bearer ${access_token}`,
                 Accept: "application/json",
@@ -33,9 +36,12 @@ export default async (_: NextApiRequest, res: NextApiResponse) => {
             },
         })
         const artistResult = await search.json()
+        console.log(artistResult)
         monthlyArtists.push({
-            name: monthlyArtistsName[i],
-            url: artistResult.artists.items[0].images[2].url,
+            name: monthlyArtistsName[i].name,
+            playcount: monthlyArtistsName[i].playcount,
+            href: artistResult.artists.items[0].external_urls.spotify,
+            img: artistResult.artists.items[0].images[2].url,
         })
     }
 
