@@ -4,7 +4,7 @@ export default function Projects() {
     return (
         <div className="w-[85vw] mt-11">
             <h1 className="text-center font-bold text-2xl p-2">Projects</h1>
-            <p className="m-auto w-96 text-center">I like to make projects that are personal to me so I feel more engaged with my learning. Here are some of the ones I have worked on recently!</p>
+            <p className="m-auto sm:w-96 break-normal text-center">I like to make projects that are personal to me so I feel more engaged with my learning. Here are some of the ones I have worked on recently!</p>
             <ul className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 <ProjectCard techs={['Typescript', 'Tailwind', 'React', 'Next.js']} url={'https://github.com/wesngu28/rhodesapi'} image={'personal-web.png'}name={'Personal Website'} desc={'This very own website. I learned a lot about Tailwind through this project and got more exposure with the Next.js framework.'} />
                 <ProjectCard techs={['Typescript', 'Node.js','Express.js', 'MongoDB']} url={'https://github.com/wesngu28/rhodesapi'} image={'rhodes.png'}name={'RhodesAPI'} desc={'A RESTful API for the gacha tower defense game Arknights. While the game does have some existing databases in various repositories and websites, most were out of date and lacked apis, so I made a scraper to hit the Gamepress page for each operator and stored them in an instance hosted on Mongo Atlas.'} />

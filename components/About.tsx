@@ -13,19 +13,19 @@ interface Props {
 export default function About({ header, paragraph1, paragraph2, destination }: Props) {
     return (
         <div className="mt-11 md:flex justify-center items-center p-4 bg-[#1F2022] w-[75vw] rounded-3xl">
-            <div className="p-4 w-[55vw] m-auto">
+            <div className="md:p-4 w-[55vw] m-auto flex justify-center items-center flex-col">
                 <h1 className="text-center text-3xl font-bold">
                     {header}
                 </h1>
-                <p className="p-4 text-left text-xl leading-8">
+                <p className="md:p-4 text-left text-sm md:text-xl leading-8">
                     {paragraph1}
                 </p>
-                <p className="p-4 text-left text-xl leading-8">
+                <p className="md:p-4 text-left text-sm md:text-xl leading-8">
                     {paragraph2}
                 </p>
                 <Link href={destination}>
                     <div className="transform h-max w-max transition duration-500 hover:scale-105">
-                        <a className="hover:text-yellow-400 underline p-4 text-left text-xl leading-8">{destination === '/' ? 'Click me to return home' : 'Click me for more about me'}</a>
+                        <a className="hover:text-yellow-400 underline p-4 text-left text-sm md:text-xl leading-8 m-auto">{destination === '/' ? 'Click me to return home' : 'Click me for more about me'}</a>
                     </div>
                 </Link>
             </div>

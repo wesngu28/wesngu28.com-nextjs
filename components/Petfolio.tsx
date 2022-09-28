@@ -12,14 +12,14 @@ export default function Petfolio() {
                         <ul className="mt-4 p-4">
                             <li>
                                 <p className="text-center font-bold">Cami</p>
-                                <p>Chihuahua-Dachshund mix (chiwenie)</p>
+                                <p className="text-center">Chihuahua-Dachshund</p>
                             </li>
                             <Slideshow photos={['dog/cami1.jpg', 'dog/cami2.jpg', 'dog/cami3.jpg', 'dog/cami4.jpg', 'dog/cami5.jpg', 'dog/cami6.jpg']} />
                         </ul>
                         <ul className="mt-4 p-4">
                             <li>
                                 <p className="text-center font-bold">Xena</p>
-                                <p>Chihuahua-Dachshund mix (chiwenie)</p>
+                                <p className="text-center">Multi-mix Labrador</p>
                             </li>
                             <Slideshow photos={['dog/xena1.jpg', 'dog/xena2.jpg', 'dog/xena3.jpg', 'dog/xena4.jpg', 'dog/xena5.jpg', 'dog/xena6.jpg']} />
                         </ul>

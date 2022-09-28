@@ -25,11 +25,11 @@ export default function Slideshow(props: Props) {
             {props.photos.map((arr: string, i: number) => {
                 return (
                     active === i ? 
-                        <div key={arr} className="w-[350px] md:w-full h-[350px] sm:h-80 m-auto relative">
+                        <div key={arr} className="w-[150px] md:w-[350px] md:h-[400px] sm:h-80 m-auto relative">
                             <Image alt={'Cami'} objectFit="cover" layout="fill" key={i} src={`/${arr}`}/> 
                         </div>
                         : 
-                        <div key={arr} className="w-[350px] md:w-full h-[350px] sm:h-80 m-auto relative hidden">
+                        <div key={arr} className="w-[150px] md:w-full h-[600px] sm:h-80 m-auto relative hidden">
                             <Image alt={'Xena'} objectFit="cover" layout="fill" key={i} src={`/${arr}`} />
                         </div>
                 );

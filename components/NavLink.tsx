@@ -16,7 +16,7 @@ export default function NavLink({imgName, url}: Props) {
             <div className="w-6 h-6 mr-2">
                 <Image className="box-border object-cover" alt={`${imgName} logo`} src={imgName === 'github' ? github : imgName === 'linkedin' ? linkedin : imgName === 'email' ? email : resume} />
             </div>
-            <a target="_blank" href={url} rel="noopener noreferrer" className="text-black text-xl hover:underline">
+            <a target="_blank" href={url} rel="noopener noreferrer" className="text-black md:text-xl hover:underline">
                 {imgName === 'email' ? 'wesngu028@gmail.com' : imgName === 'resume' ? 'resume' : 'wesngu28'}
             </a>
         </li>
