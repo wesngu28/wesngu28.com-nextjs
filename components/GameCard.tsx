@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { useState } from "react";
 import GameInfo from "./GameInfo";
 
@@ -7,11 +8,11 @@ interface Props {
     url: string;
 }
 
-export default function GameCard({image, name, url}: Props) {
+export default function GameCard({ image, name, url }: Props) {
 
     const openNewTab = (gameUrl: string) => {
         window.open(gameUrl, '_blank', 'noopener,noreferrer');
-      };
+    };
 
     const [moreInfo, setMoreInfo] = useState(false)
 
@@ -19,12 +20,14 @@ export default function GameCard({image, name, url}: Props) {
         <>
             <li className="bg-[#21222a] m-1 inline-block border-b-4">
                 <div onClick={() => openNewTab(url)} className="peer hover:scale-125 hover:cursor-pointer z-10 ease-out">
-                    <img
-                        onMouseEnter={() => setMoreInfo(true)}
-                        onMouseLeave={() => setMoreInfo(false)}
-                        className="w-full" src={image} title={name} />
+                    <div className="relative">
+                        <Image
+                            onMouseEnter={() => setMoreInfo(true)}
+                            onMouseLeave={() => setMoreInfo(false)}
+                            src={image} title={name} layout="responsive" width={'460px'} height={'215px'} />
+                    </div>
                 </div>
-                <div className="absolute left-1/2 opacity-0 peer-hover:opacity-100 transition-opacity duration-500">
+                <div className="absolute left-1/2 opacity-0 peer-hover:opacity-100 transition-opacity duration-500 z-50">
                     {moreInfo && (
                         <div className="relative bg-[#6E644E] rounded-3xl mt-11 p-4 -left-1/2 top-6 w-screen md:w-full">
                             <GameInfo name={name} />
