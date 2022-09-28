@@ -21,7 +21,7 @@ export const getRecentSong = async () => {
     })
 }
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const Spotify = async (req: NextApiRequest, res: NextApiResponse) => {
     const response = await getCurrentSong()
 
     if (response.status === 204 || response.status > 400) {
@@ -61,3 +61,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
         title,
     });
 };
+
+export default Spotify;

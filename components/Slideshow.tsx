@@ -26,11 +26,11 @@ export default function Slideshow(props: Props) {
                 return (
                     active === i ? 
                         <div key={arr} className="w-[350px] md:w-full h-[350px] sm:h-80 m-auto relative">
-                            <Image objectFit="cover" layout="fill" key={i} src={`/${arr}`}/> 
+                            <Image alt={'Cami'} objectFit="cover" layout="fill" key={i} src={`/${arr}`}/> 
                         </div>
                         : 
                         <div key={arr} className="w-[350px] md:w-full h-[350px] sm:h-80 m-auto relative hidden">
-                            <Image objectFit="cover" layout="fill" key={i} src={`/${arr}`} />
+                            <Image alt={'Xena'} objectFit="cover" layout="fill" key={i} src={`/${arr}`} />
                         </div>
                 );
             })}

@@ -12,7 +12,7 @@ interface Artist {
     img: string;
 }
 
-export default async (_: NextApiRequest, res: NextApiResponse) => {
+const lastFM = async (_: NextApiRequest, res: NextApiResponse) => {
 
     const response = await fetch(`https://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=scrambledeggdog&period=1month&limit=8&api_key=${lastfmKey}&format=json`)
     const artists = await response.json()
@@ -48,3 +48,5 @@ export default async (_: NextApiRequest, res: NextApiResponse) => {
         monthlyArtists
     });
 };
+
+export default lastFM;

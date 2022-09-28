@@ -24,7 +24,7 @@ export default function GameCard({ image, name, url }: Props) {
                         <Image
                             onMouseEnter={() => setMoreInfo(true)}
                             onMouseLeave={() => setMoreInfo(false)}
-                            src={image} title={name} layout="responsive" width={'460px'} height={'215px'} />
+                            src={image} title={name} alt={`${name} header`} layout="responsive" width={'460px'} height={'215px'} />
                     </div>
                 </div>
                 <div className="absolute left-1/2 opacity-0 peer-hover:opacity-100 transition-opacity duration-500 z-50">

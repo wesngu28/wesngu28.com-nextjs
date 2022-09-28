@@ -16,9 +16,9 @@ export default function GameInfo(props: Props) {
     if (props.name === 'Skyrim') {
         return (
             <>
-                <p>I've only ever finished this game once, as a Redguard sneak archer</p>
+                <p>I have only ever finished this game once, as a Redguard sneak archer</p>
                 <p className="mb-5">(because how else can you play a Bethesda rpg).</p>
-                <Image src={skyrim} />
+                <Image alt={'steam skyrim stats'} src={skyrim} />
 
                 <table className="m-auto w-full">
                     <caption className="mb-5 font-bold">Elder Scrolls Favorites</caption>
@@ -63,37 +63,37 @@ export default function GameInfo(props: Props) {
     }
     if (props.name === 'Hearts of Iron IV') {
         return (
-            <Image src={hoi4} />
+            <Image alt={'steam hoi4 stats'} src={hoi4} />
         )
     }
     if (props.name === 'Super Auto Pets') {
         return (
-            <Image src={sap} />
+            <Image alt={'super auto pets stats'} src={sap} />
         )
     }
     if (props.name === 'League of Legends') {
         return (
-            <Image className="z-50" src={league} />
+            <Image alt={'league profile from u.gg'} className="z-50" src={league} />
         )
     }
     if (props.name === 'Starcraft II') {
         return (
-            <Image src={sc2} />
+            <Image alt={'starcraft profile'} src={sc2} />
         )
     }
     if (props.name === 'Civilization V') {
         return (
-            <Image src={civ} />
+            <Image alt={'steam civ 5 stats'} src={civ} />
         )
     }
     if (props.name === 'Arknights') {
         return (
-            <Image src={ak} />
+            <Image alt={'arknights profile'} src={ak} />
         )
     }
     if (props.name === 'Azur Lane') {
         return (
-            <Image src={al} />
+            <Image alt={'azur lane profile'} src={al} />
         )
     }
     return (
