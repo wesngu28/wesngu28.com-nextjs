@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useState } from "react";
+import { useInView } from "react-intersection-observer";
 
 import skyrim from '../public/games/Skyrim.png'
 import hoi4 from '../public/games/hoi4.png'
@@ -15,9 +16,14 @@ interface Props {
     name: string;
     url: string;
     imgName: string;
+    delay?: string;
 }
 
-export default function GameCard({ image, name, url, imgName }: Props) {
+export default function GameCard({ image, name, url, imgName, delay }: Props) {
+
+    const { ref: gameRef, inView: isInView} = useInView({
+        triggerOnce: true
+    })
 
     const openNewTab = (gameUrl: string) => {
         window.open(gameUrl, '_blank', 'noopener,noreferrer');
@@ -27,7 +33,7 @@ export default function GameCard({ image, name, url, imgName }: Props) {
 
     return (
         <>
-            <li className="bg-[#21222a] hover:z-50 m-1 inline-block border-b-4">
+            <li ref={gameRef} className={`${isInView ? `${delay} opacity-100 md:translate-x-0-all duration-1000` : 'md:-translate-x-full  opacity-0'} bg-[#21222a] hover:z-50 m-1 inline-block border-b-4`}>
                 <div onClick={() => openNewTab(url)} className="peer hover:scale-125 hover:cursor-pointer z-10 ease-out">
                 <Image
                             onMouseEnter={() => setMoreInfo(true)}

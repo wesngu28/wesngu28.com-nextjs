@@ -4,7 +4,7 @@ import NowPlaying from "./NowPlaying";
 export default function Music() {
 
     return(
-        <div className="mt-11 flex w-[75vw] justify-evenly items-center flex-col md:flex-row">
+        <div className="mt-11 flex h-[75vh] w-[75vw] justify-evenly items-center flex-col md:flex-row">
             <NowPlaying />
             <ul className="flex flex-wrap justify-center">
                 <div>
