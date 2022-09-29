@@ -5,8 +5,7 @@
 @layer base {
     body {
       @apply font-serif;
-      @apply bg-black;
+      @apply bg-gradient-to-br from-black to-slate-900;
       @apply text-gray-300;
     }
   }
-
