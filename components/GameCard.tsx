@@ -36,10 +36,10 @@ export default function GameCard({ image, name, url, imgName }: Props) {
                             src={image} title={name} alt={`${name} header`} layout="responsive" width={'460px'} height={'215px'} />
                     </div>
                 </div>
-                <div className="absolute left-1/2 opacity-0 peer-hover:opacity-100 transition-opacity duration-500 z-50">
+                <div className="absolute left-1/2 md:opacity-0 peer-hover:opacity-100 transition-opacity duration-500 z-50">
                     {moreInfo && (
-                        <div className="relative bg-[#6E644E] rounded-3xl mt-11 p-4 -left-1/2 top-6 w-screen md:w-full">
-                            {imgName === 'skyrim' ? <Skyrim /> : <Image alt={`${name} stats`} src={imgName === 'hoi4' ? hoi4 : imgName === 'lol' ? league : imgName === 'sap' ? sap : imgName === 'sc2' ? sc2 : imgName === 'ak' ? ak : imgName === 'civ' ? civ : al} />}
+                        <div className="relative bg-[#6E644E] rounded-xl mt-11 p-2 -left-1/2 top-6 w-screen md:w-full">
+                            {imgName === 'skyrim' ? <Skyrim /> : <Image className="m-auto" alt={`${name} stats`} src={imgName === 'hoi4' ? hoi4 : imgName === 'lol' ? league : imgName === 'sap' ? sap : imgName === 'sc2' ? sc2 : imgName === 'ak' ? ak : imgName === 'civ' ? civ : al} />}
                         </div>
                     )}
                 </div>

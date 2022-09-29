@@ -5,7 +5,7 @@ export default function Games() {
         <div className="w-[75vw] mt-11">
             <h1 className="text-center text-2xl mb-0">Games</h1>
             <p className="p-4 text-center text-xl">These are just some games I like playing.</p>
-            <ul className="grid grid-cols-2 md:grid-cols-4">
+            <ul className="grid grid-cols sm:grid-cols-2 md:grid-cols-4">
                 <GameCard name={'Skyrim'} image={'/gamecover/skyrim.jpg'} url={'https://elderscrolls.bethesda.net/en/skyrim'} imgName='skyrim' />
                 <GameCard name={'Hearts of Iron IV'} image={'/gamecover/hoi4.jpg'} url={'https://www.paradoxinteractive.com/games/hearts-of-iron-iv/about'} imgName='hoi4' />
                 <GameCard name={'Super Auto Pets'} image={'/gamecover/sap.jpg'} url={'https://teamwoodgames.com/'} imgName='sap' />
