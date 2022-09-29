@@ -27,14 +27,12 @@ export default function GameCard({ image, name, url, imgName }: Props) {
 
     return (
         <>
-            <li className="bg-[#21222a] m-1 inline-block border-b-4">
+            <li className="bg-[#21222a] hover:z-50 m-1 inline-block border-b-4">
                 <div onClick={() => openNewTab(url)} className="peer hover:scale-125 hover:cursor-pointer z-10 ease-out">
-                    <div className="relative">
-                        <Image
+                <Image
                             onMouseEnter={() => setMoreInfo(true)}
                             onMouseLeave={() => setMoreInfo(false)}
                             src={image} title={name} alt={`${name} header`} layout="responsive" width={'460px'} height={'215px'} />
-                    </div>
                 </div>
                 <div className="absolute left-1/2 md:opacity-0 peer-hover:opacity-100 transition-opacity duration-500 z-50">
                     {moreInfo && (
