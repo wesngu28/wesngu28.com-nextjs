@@ -4,6 +4,12 @@ import "mapbox-gl/dist/mapbox-gl.css";
 import { useRef } from 'react';
 import Link from 'next/link';
 import Chapter from './Chapter';
+import Image from 'next/image';
+import bellevueCollegeMapMarker from '../public/map/bc-logo.jpg'
+import uwMapMarker from '../public/map/uw-logo.png'
+import nhstcMapMarker from '../public/map/nhstc-marker.png'
+import targetMapMarker from '../public/map/target-marker.jpg'
+import amazonFreshMapMarker from '../public/map/fresh-marker.png'
 
 export default function ScrollyMap() {
     const mapRef = useRef<MapRef>(null);
@@ -44,7 +50,8 @@ export default function ScrollyMap() {
             center: [-122.148192, 47.584425],
             zoom: 16.5,
             pitch: 0,
-            marker: '/map/bc-logo.jpg'
+            alt: 'bellevue college logo map marker',
+            marker: bellevueCollegeMapMarker
         }, {
             ref: uw,
             view: uwView,
@@ -52,7 +59,8 @@ export default function ScrollyMap() {
             zoom: 15.5,
             pitch: 45.0,
             style: 'mapbox://styles/wesngu028/cl8qbgdt6000b15t70lultgn5',
-            marker: '/map/uw-logo.png'
+            alt: 'university of washington logo map marker',
+            marker: uwMapMarker
         }, {
             ref: clack,
             view: clackView,
@@ -92,7 +100,7 @@ export default function ScrollyMap() {
                     Scrollytelling my Journey
                 </h1>
                 <p className="md:p-4 text-left text-md md:text-xl leading-8">
-                    Fly around the world in my implementation of Mapbox's scrollytelling using intersection observer in React.
+                    Fly around the world in my implementation of Mapbox scrollytelling using intersection observer in React.
                 </p>
                 <Link href={'/'}>
                     <div className="hover:animate-pulse ransform h-max w-max transition duration-500 hover:scale-105">
@@ -102,7 +110,7 @@ export default function ScrollyMap() {
             </header>
             {mapChapter.map((chapter, idx) => {
                 return (
-                    <Chapter index={idx} ref={chapter.ref} view={chapter.view} />
+                    <Chapter key={chapter.center[0]} index={idx} ref={chapter.ref} view={chapter.view} />
                 )
             })}
             <div className="h-[100vh] w-full fixed top-0 bottom-0 left-0 right-0">
@@ -118,23 +126,23 @@ export default function ScrollyMap() {
                     mapStyle="mapbox://styles/wesngu028/cl8qaisxu000m14nzgup6koq4"
                     mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
                 >
-                    {mapChapter.map((chapter, idx) => {
+                    {mapChapter.map((chapter) => {
                         return (
                             chapter.view ? chapter.view === otherCareerView ? 
                                 <>
                                     <Marker longitude={-122.1800715} latitude={47.5532877}>
-                                        <img src="/map/nhstc-marker.png" />
+                                        <Image alt='nhstc logo map marker' src={nhstcMapMarker} />
                                      </Marker>
                                     <Marker longitude={-122.1999175} latitude={47.4968123}>
-                                        <img src="/map/target-marker.jpg" />
+                                        <Image alt='target logo map marker' src={targetMapMarker} />
                                     </Marker>
                                     <Marker longitude={-122.1733261} latitude={47.575893}>
-                                        <img src="/map/fresh-marker.png" />
+                                        <Image alt='amazon fresh logo map marker' src={amazonFreshMapMarker} />
                                     </Marker>
                                 </> 
                                 :
                                     <Marker longitude={chapter.center[0]} latitude={chapter.center[1]}>
-                                        {chapter.marker ? <img src={`${chapter.marker}`} /> : null}
+                                        {chapter.marker ? <Image alt={chapter.alt} src={chapter.marker} /> : null}
                                     </Marker> : null
                         )
                     })}

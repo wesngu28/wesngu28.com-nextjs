@@ -3,6 +3,7 @@ import { useState } from "react";
 
 interface Props {
     photos: string[];
+    dynamicAlt: string[];
     caption?: Array<{
         location: string;
         duration: string;
@@ -10,7 +11,7 @@ interface Props {
     }>;
 }
 
-export default function Slideshow({ photos, caption }: Props) {
+export default function Slideshow({ photos, dynamicAlt, caption }: Props) {
     const [active, setActive] = useState(0)
 
     function decrementImage() {
@@ -34,7 +35,7 @@ export default function Slideshow({ photos, caption }: Props) {
                                 <h2 className="text-center text-xl font-bold">{caption[i].location}</h2>
                             </div>
                         : null}
-                        <Image alt={'Cami'} objectFit="contain" layout="fill" key={i} src={`/${arr}`} priority={true} />
+                        <Image alt={dynamicAlt.length > 1 ? dynamicAlt[i] : dynamicAlt[0]} objectFit="contain" layout="fill" key={i} src={`/${arr}`} priority={true} />
                         {caption ? <p className={"text-center -bottom-2 absolute"}><span className="font-bold">{caption[i].title}</span> - {caption[i].duration}</p> : null}
                      </div>
                 );
