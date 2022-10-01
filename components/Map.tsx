@@ -33,6 +33,7 @@ export default function Maps() {
                 duration: 3000,
                 essential: true,
             })
+            mapRef.current.getMap().setStyle('mapbox://styles/wesngu028/cl8qaisxu000m14nzgup6koq4')
         }
         if (bhamView) {
             mapRef.current.getMap().flyTo({
@@ -42,6 +43,7 @@ export default function Maps() {
                 duration: 3000,
                 essential: true,
             })
+            mapRef.current.getMap().setStyle('mapbox://styles/mapbox/dark-v10')
         }
         if (hazenView) {
             mapRef.current.getMap().flyTo({
@@ -62,6 +64,7 @@ export default function Maps() {
                 duration: 3000,
                 essential: true,
             })
+            mapRef.current.getMap().setStyle('mapbox://styles/wesngu028/cl8qbgdt6000b15t70lultgn5')
         }
         if (rsView) {
             mapRef.current.getMap().flyTo({
@@ -72,6 +75,7 @@ export default function Maps() {
                 duration: 3000,
                 essential: true,
             })
+            mapRef.current.getMap().setStyle('mapbox://styles/mapbox/dark-v10')
         }
         if (clackView) {
             mapRef.current.getMap().flyTo({
@@ -82,6 +86,7 @@ export default function Maps() {
                 duration: 3000,
                 essential: true,
             })
+            mapRef.current.getMap().setStyle('mapbox://styles/mapbox/dark-v10')
         }
         if (otherCareerView) {
             mapRef.current.getMap().flyTo({
