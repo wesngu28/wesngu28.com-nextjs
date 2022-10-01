@@ -108,8 +108,14 @@ export default function Maps() {
             <div className="h-[100vh] w-full fixed top-0 bottom-0 left-0 right-0">
                 <Map
                     ref={mapRef}
+                    initialViewState={{
+                        longitude: 107.800854,
+                        latitude: 15.82164,
+                        zoom: 6,
+                        pitch: 16.5
+                      }}
                     interactive={false}
-                    mapStyle="mapbox://styles/mapbox/dark-v10"
+                    mapStyle="mapbox://styles/wesngu028/cl8qaisxu000m14nzgup6koq4"
                     mapboxAccessToken={process.env.NEXT_PUBLIC_MAPBOX_TOKEN}
                 >
                     {mapChapter.map((chapter, idx) => {
