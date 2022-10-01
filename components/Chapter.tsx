@@ -1,12 +1,10 @@
-import Image, { StaticImageData } from "next/image";
-import React from "react";
-import { useInView } from "react-intersection-observer";
+import Image from "next/image";
+import { forwardRef } from "react";
 import Slideshow from "./Slideshow";
 import southVietnamFlag from '../public/map/flag.svg'
 import bellingham from '../public/map/bham.jpg'
 import edhesive from '../public/map/edhesive.png'
 import bc from '../public/map/BC.jpg'
-import nhstc from '../public/map/nhstc.jpg'
 import uws from '../public/map/uw.jpg'
 import iwp from '../public/map/iwp.jpg'
 
@@ -15,7 +13,7 @@ interface Props {
     view: boolean;
 }
 
-const Chapter = ({ index, view }: Props, ref) => {
+const Chapter = forwardRef<HTMLDivElement, Props>(({ index, view }: Props, ref) => {
     const chapters = [
         {
             top: '45vh',
@@ -81,6 +79,6 @@ const Chapter = ({ index, view }: Props, ref) => {
             </div>
         </div>
     )
-}
+})
 
-export default React.forwardRef(Chapter)
+export default Chapter

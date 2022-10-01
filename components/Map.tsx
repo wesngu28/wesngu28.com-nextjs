@@ -5,8 +5,8 @@ import { useRef } from 'react';
 import Link from 'next/link';
 import Chapter from './Chapter';
 
-export default function Maps() {
-    const mapRef = useRef<MapRef>();
+export default function ScrollyMap() {
+    const mapRef = useRef<MapRef>(null);
 
     const { ref: vietnam, inView: vietnamView } = useInView({ threshold: 0.25 })
     const { ref: bham, inView: bhamView } = useInView({ threshold: 0.25 })
