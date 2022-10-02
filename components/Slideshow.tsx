@@ -33,7 +33,7 @@ export default function Slideshow({ photos, dynamicAlt, caption }: Props) {
             <p onClick={decrementImage} className="text-6xl text-[#6E6E6E]">&#8592;</p>
             {photos.map((photo: StaticImageData, i: number) => {
                 return (
-                    <div key={i} className={`flex justify-center ${photos.length === 6  ? 'h-96 md:h-1/2 w-[200px] md:w-1/2' : null } m-auto relative ${active === i ? 'block animate-slideshow' : 'hidden'}`}>
+                    <div key={i} className={`flex flex-col justify-center ${photos.length === 6  ? 'h-96 md:h-1/2 w-[200px] md:w-1/2' : null } m-auto relative ${active === i ? 'block animate-slideshow' : 'hidden'}`}>
                         {caption ? 
                             <div>
                                 <h2 className="text-center text-xl font-bold">{caption[i].location}</h2>
