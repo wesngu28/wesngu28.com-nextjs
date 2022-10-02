@@ -71,7 +71,7 @@ const Chapter = forwardRef<HTMLDivElement, Props>(({ index, view }: Props, ref) 
     ]
 
     return (
-        <div ref={ref} className={`${view ? 'opacity-100 transition-opacity duration-1000' : 'opacity-25'} rounded-3xl bg-[#1F2022] text-white z-10 absolute mb-11 ${chapters[index].top[1]} ${chapters[index].top[0]} md:p-4 md:w-1/4 h-max rounded overflow-scroll`}>
+        <div ref={ref} className={`${view ? 'opacity-100 transition-opacity duration-1000' : 'opacity-25'} rounded-3xl bg-[#1F2022] text-white z-10 absolute mb-11 ${chapters[index].top[1]} ${chapters[index].top[0]} md:p-4 md:w-1/4 h-max rounded`}>
             <h2 className="text-center text-2xl font-bold">
                 {chapters[index].heading}
             </h2>

@@ -85,7 +85,7 @@ export default function ScrollyMap() {
                     zoom: locationConf.zoom,
                     pitch: locationConf.pitch,
                     bearing: locationConf.bearing ? locationConf.bearing : 0,
-                    duration: 12000,
+                    duration: 8000,
                     essential: true,
                 })
                 mapRef.current!.getMap().setStyle(locationConf.style ? locationConf.style : 'mapbox://styles/mapbox/dark-v10')
