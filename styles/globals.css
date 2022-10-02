@@ -3,10 +3,22 @@
 @tailwind utilities;
 
 @layer base {
-    body {
-      @apply font-serif;
-      @apply bg-gradient-to-br from-black to-slate-900;
-      @apply text-gray-300;
-      @apply overflow-hidden;
-    }
+  body {
+    @apply font-serif;
+    @apply bg-gradient-to-br from-black to-slate-900;
+    @apply text-gray-300;
+    @apply overflow-x-hidden;
+    @apply scrollbar-hide;
   }
+}
+
+@layer utilities {
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
