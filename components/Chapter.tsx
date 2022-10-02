@@ -7,6 +7,9 @@ import edhesive from '../public/map/edhesive.png'
 import bc from '../public/map/BC.jpg'
 import uws from '../public/map/uw.jpg'
 import iwp from '../public/map/iwp.jpg'
+import nhstc from '../public/map/nhstc.png'
+import target from '../public/map/target.jpg'
+import fresh from '../public/map/fresh.png'
 
 interface Props {
     index: number;
@@ -63,26 +66,25 @@ const Chapter = forwardRef<HTMLDivElement, Props>(({ index, view }: Props, ref) 
         },
         {
             top: 'top-[630vh]',
+            heading: 'Other Work'
         }
     ]
 
     return (
-        <div ref={ref} className={`${view ? 'opacity-100 transition-opacity duration-1000' : 'opacity-25'} rounded-3xl bg-[#1F2022] text-white z-10 absolute mb-11 ${chapters[index].top} left-5 p-4 w-1/4 h-max rounded overflow-scroll`}>
+        <div ref={ref} className={`${view ? 'opacity-100 transition-opacity duration-1000' : 'opacity-25'} rounded-3xl bg-[#1F2022] text-white z-10 absolute mb-11 ${chapters[index].top} p-4 md:w-1/4 h-max rounded overflow-scroll`}>
             <h2 className="text-center text-2xl font-bold">
                 {chapters[index].heading}
             </h2>
-            <p className="m-2 text-center">{chapters[index].duration ? chapters[index].duration : null}</p>
-            <div className="p-4">
-                {chapters[index].source ? <Image alt={chapters[index].alt} src={chapters[index].source!} /> : null}
-            </div>
+            {chapters[index].duration ? <p className="m-2 text-center">{chapters[index].duration}</p> : null}
+            {chapters[index].source ? <div className="p-4"><Image alt={chapters[index].alt} src={chapters[index].source!} /></div> : null}
             <div>
                 {chapters[index].paragraph ? chapters[index].paragraph!.map((text) => {
                     return (
-                        <p key={text} className="md:p-4 text-left text-md md:text-lg leading-8">{text}</p>
+                        <p key={text} className="md:p-4 text-left text-sm md:text-lg leading-8">{text}</p>
                     );
                 }) : null}
-                {chapters[index].top === 'top-[630vh]' ? <div className="pb-6">
-                    <Slideshow photos={['map/nhstc.png', 'map/target.jpg', 'map/fresh.png']} caption={[
+                {chapters[index].top === 'top-[630vh]' ? <div>
+                    <Slideshow photos={[nhstc, target, fresh]} caption={[
                         { location: 'Newport Hills Swim and Tennis Club', duration: 'Mar 2018 - Sep 2020', title: 'Lifeguard' },
                         { location: 'Target', duration: 'Oct 2020 - Jan 2021', title: 'Fulfillment Expert' },
                         { location: 'Amazon Fresh', duration: 'May 2021 -  Jul 2022', title: 'Overnight Associate' }]} dynamicAlt={['newport hills swim club logo', 'target logo', 'amazon fresh logo']} />

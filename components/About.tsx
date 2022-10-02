@@ -2,6 +2,10 @@ import Link from "next/link";
 import Image from "next/image"
 import me from "../public/grotesque.jpeg"
 import NavLink from "./NavLink";
+import github from "../public/github.svg"
+import linkedin from "../public/linkedin.svg"
+import email from "../public/email.svg"
+import resume from "../public/resume.png"
 
 interface Props {
     header: string;
@@ -34,10 +38,10 @@ export default function About({ header, paragraph1, paragraph2, destination }: P
                     <Image className="p-4 rounded-full mx-auto object-cover" alt="photo of me" src={me} />
                 </div>
                 <ul className="list-none flex flex-wrap items-center justify-center">
-                    <NavLink imgName="github" url="https://www.github.com/wesngu28" />
-                    <NavLink imgName="linkedin" url="https://www.linkedin.com/in/wesngu28/" />
-                    <NavLink imgName="email" url="" />
-                    <NavLink imgName="resume" url="https://wesngu28.github.io/resume/" />
+                    <NavLink img={github} name="github" url="https://www.github.com/wesngu28" />
+                    <NavLink img={linkedin} name="linkedin" url="https://www.linkedin.com/in/wesngu28/" />
+                    <NavLink img={email} name="email" url="" />
+                    <NavLink img={resume} name="resume" url="https://wesngu28.github.io/resume/" />
                 </ul>
             </div>
         </div>
