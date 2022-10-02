@@ -71,10 +71,10 @@ export default function ScrollyMap() {
         }, {
             ref: otherCareer,
             view: otherCareerView,
-            center: [-122.1914112, 47.5165244],
-            zoom: 14.25,
-            pitch: 60.5,
-            bearing: 45,
+            center: [-122.1800715, 47.5832877],
+            zoom: 11.0,
+            pitch: 0.5,
+            bearing: 0,
         }]
 
     if (mapRef.current) {
@@ -85,7 +85,7 @@ export default function ScrollyMap() {
                     zoom: locationConf.zoom,
                     pitch: locationConf.pitch,
                     bearing: locationConf.bearing ? locationConf.bearing : 0,
-                    duration: 3000,
+                    duration: 12000,
                     essential: true,
                 })
                 mapRef.current!.getMap().setStyle(locationConf.style ? locationConf.style : 'mapbox://styles/mapbox/dark-v10')
@@ -94,7 +94,7 @@ export default function ScrollyMap() {
     }
 
     return (
-        <div className="h-[700vh]">
+        <div className="h-[1030vh] md:h-[700vh]">
             <header className="absolute w-full z-10 p-8 flex items-center justify-center flex-col bg-[#1F2022]">
                 <h1 className="text-center text-3xl font-bold">
                     Scrollytelling my Journey
