@@ -7,5 +7,6 @@
       @apply font-serif;
       @apply bg-gradient-to-br from-black to-slate-900;
       @apply text-gray-300;
+      @apply overflow-hidden;
     }
   }
