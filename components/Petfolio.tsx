@@ -25,7 +25,7 @@ export default function Petfolio() {
                 <div className="mt-11 md:h-1/4 md:w-1/4">
                     <Image alt="my dogs, cami and xena" src={dogsscuffed} />
                 </div>
-                <div className="p-4 text-left text-xl leading-8 mb-4">
+                <div className="mt-11 p-4 text-left text-xl leading-8 mb-4">
                     <div className="flex flex-col">
                         <ul className="mt-4 p-4">
                             <li>
