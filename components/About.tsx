@@ -16,7 +16,7 @@ interface Props {
 
 export default function About({ header, paragraph1, paragraph2, destination }: Props) {
     return (
-        <div className="md:flex justify-center items-center p-4 bg-[#1F2022] w-full">
+        <div className="md:flex justify-center items-center p-4 bg-[#1F2022] w-full relative">
             <div className="md:p-4 w-full md:w-[75vw] lg:w-[55vw] m-auto flex justify-center items-center flex-col">
                 <h1 className="text-center text-3xl font-bold">
                     {header}

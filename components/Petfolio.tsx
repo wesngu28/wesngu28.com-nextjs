@@ -17,7 +17,7 @@ import Image from 'next/image'
 
 export default function Petfolio() {
     return (
-        <section className="mt-11 mb-11 flex justify-center bg-[#1F2022] ml-4 mr-4 w-[75vw] rounded-3xl">
+        <div className="mt-11 mb-40 flex justify-center bg-[#1F2022] ml-4 mr-4 w-[75vw] rounded-3xl relative">
             <div className="p-4 flex items-center flex-col w-[65vw]">
                 <h1 className="text-center text-3xl">
                     meet my dogs
@@ -44,6 +44,6 @@ export default function Petfolio() {
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
     )
 }
