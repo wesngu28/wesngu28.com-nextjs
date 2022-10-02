@@ -1,6 +1,6 @@
-import Image from "next/image";
-import { forwardRef } from "react";
-import Slideshow from "./Slideshow";
+import Image from "next/image"
+import { forwardRef } from "react"
+import Slideshow from "./Slideshow"
 import southVietnamFlag from '../public/map/flag.svg'
 import bellingham from '../public/map/bham.jpg'
 import edhesive from '../public/map/edhesive.png'
@@ -12,8 +12,8 @@ import target from '../public/map/target.png'
 import fresh from '../public/map/fresh.png'
 
 interface Props {
-    index: number;
-    view: boolean;
+    index: number
+    view: boolean
 }
 
 const Chapter = forwardRef<HTMLDivElement, Props>(({ index, view }: Props, ref) => {
@@ -81,7 +81,7 @@ const Chapter = forwardRef<HTMLDivElement, Props>(({ index, view }: Props, ref) 
                 {chapters[index].paragraph ? chapters[index].paragraph!.map((text) => {
                     return (
                         <p key={text} className="p-4 text-left text-sm md:text-lg leading-8">{text}</p>
-                    );
+                    )
                 }) : null}
                 {(chapters[index].top[1] === 'top-[930vh]') || (chapters[index].top[0] === 'md:top-[630vh]') ? <div>
                     <Slideshow photos={[nhstc, target, fresh]} caption={[

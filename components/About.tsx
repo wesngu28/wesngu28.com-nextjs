@@ -1,17 +1,17 @@
-import Link from "next/link";
+import Link from "next/link"
 import Image from "next/image"
 import me from "../public/grotesque.jpeg"
-import NavLink from "./NavLink";
+import NavLink from "./NavLink"
 import github from "../public/github.svg"
 import linkedin from "../public/linkedin.svg"
 import email from "../public/email.svg"
 import resume from "../public/resume.png"
 
 interface Props {
-    header: string;
-    paragraph1: string;
-    paragraph2?: string;
-    destination: string;
+    header: string
+    paragraph1: string
+    paragraph2?: string
+    destination: string
 }
 
 export default function About({ header, paragraph1, paragraph2, destination }: Props) {

@@ -1,27 +1,27 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
-import { getAccessToken } from '../../helper/access';
+import { getAccessToken } from '../../helper/access'
 
 const {
     LASTFM_API_KEY: lastfmKey
-} = process.env;
+} = process.env
 
 interface Artist {
-    name: string;
-    playcount: number;
-    href: string;
-    img: string;
+    name: string
+    playcount: number
+    href: string
+    img: string
 }
 
 interface topArtist {
-    streamable: string;
-    image: [];
-    mbid: string;
-    url: string;
-    playcount: string;
+    streamable: string
+    image: []
+    mbid: string
+    url: string
+    playcount: string
     attr: {
-        rank: string;
-    };
-    name: string;
+        rank: string
+    }
+    name: string
 }
 
 const lastFM = async (_: NextApiRequest, res: NextApiResponse) => {
@@ -38,7 +38,7 @@ const lastFM = async (_: NextApiRequest, res: NextApiResponse) => {
 
     const { access_token } = await getAccessToken()
 
-    const monthlyArtists: Array<Artist> = [];
+    const monthlyArtists: Array<Artist> = []
     for (let i = 0; i < monthlyArtistsName.length; i++) {
         const search = await fetch(`https://api.spotify.com/v1/search?q=${monthlyArtistsName[i].name}&type=artist&limit=1&locale=en-US`, {
             headers: {
@@ -58,7 +58,7 @@ const lastFM = async (_: NextApiRequest, res: NextApiResponse) => {
 
     return res.status(200).json({
         monthlyArtists
-    });
-};
+    })
+}
 
-export default lastFM;
+export default lastFM

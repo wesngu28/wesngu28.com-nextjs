@@ -1,9 +1,9 @@
-import Image from "next/image";
+import Image from "next/image"
 
 interface Props {
-    images: string[];
-    name: string;
-    desc: string;
+    images: string[]
+    name: string
+    desc: string
 }
 
 export default function SkillCard({images, name, desc}: Props) {
@@ -22,7 +22,7 @@ export default function SkillCard({images, name, desc}: Props) {
                         <div key={arr} className="m-2 relative">
                             <Image alt={`${name} logo`}src={`/${arr}`} objectFit="contain" layout="fill"/>
                         </div>
-                    );
+                    )
                 })}
             </div>
             <h2 className="text-2xl text-center">{name}</h2>

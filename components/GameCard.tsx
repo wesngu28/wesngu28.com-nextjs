@@ -1,17 +1,17 @@
-import Image, { StaticImageData } from "next/image";
-import { useState } from "react";
-import { useInView } from "react-intersection-observer";
+import Image, { StaticImageData } from "next/image"
+import { useState } from "react"
+import { useInView } from "react-intersection-observer"
 
 interface Props {
-    name: string;
-    url: string;
-    cover: StaticImageData;
-    stats: StaticImageData;
-    delay?: string;
+    name: string
+    url: string
+    cover: StaticImageData
+    stats: StaticImageData
+    delay?: string
 }
 
 interface skyrimProps {
-    stats: StaticImageData;
+    stats: StaticImageData
 }
 
 export default function GameCard({ name, url, cover, stats, delay }: Props) {
@@ -21,8 +21,8 @@ export default function GameCard({ name, url, cover, stats, delay }: Props) {
     })
 
     const openNewTab = (gameUrl: string) => {
-        window.open(gameUrl, '_blank', 'noopener,noreferrer');
-    };
+        window.open(gameUrl, '_blank', 'noopener,noreferrer')
+    }
 
     const [moreInfo, setMoreInfo] = useState(false)
 

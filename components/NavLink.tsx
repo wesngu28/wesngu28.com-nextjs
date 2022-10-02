@@ -1,9 +1,9 @@
 import Image, { StaticImageData } from "next/image"
 
 interface Props {
-    img: StaticImageData;
-    name: string;
-    url: string;
+    img: StaticImageData
+    name: string
+    url: string
 }
 
 export default function NavLink({img, url, name}: Props) {

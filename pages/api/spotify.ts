@@ -4,13 +4,13 @@ import { getAccessToken } from '../../helper/access'
 
 interface spotifyArtist {
     external_urls: {
-        spotify: string;
+        spotify: string
     },
-    href: string;
-    id: string;
-    name: string;
-    type: string;
-    url: string;
+    href: string
+    id: string
+    name: string
+    type: string
+    url: string
 }
 
 export const getCurrentSong = async () => {
@@ -38,7 +38,7 @@ const Spotify = async (req: NextApiRequest, res: NextApiResponse) => {
     if (response.status === 204 || response.status > 400) {
         const response = await getRecentSong()
         const recentSongs = await response.json()
-        const song = recentSongs.items[Math.floor(Math.random() * recentSongs.items.length)];
+        const song = recentSongs.items[Math.floor(Math.random() * recentSongs.items.length)]
         const title = song.track.name
         const artist = song.track.artists.map((_artist: spotifyArtist) => _artist.name).join(', ')
         const album = song.track.album.name
@@ -52,7 +52,7 @@ const Spotify = async (req: NextApiRequest, res: NextApiResponse) => {
             songUrl,
             title,
             recent: true,
-        });
+        })
     }
 
     const song = await response.json()
@@ -70,7 +70,7 @@ const Spotify = async (req: NextApiRequest, res: NextApiResponse) => {
         isPlaying,
         songUrl,
         title,
-    });
-};
+    })
+}
 
-export default Spotify;
+export default Spotify

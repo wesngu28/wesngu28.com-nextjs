@@ -1,5 +1,5 @@
-import ArtistCard from "./ArtistCard";
-import NowPlaying from "./NowPlaying";
+import ArtistCard from "./ArtistCard"
+import NowPlaying from "./NowPlaying"
 
 export default function Music() {
 

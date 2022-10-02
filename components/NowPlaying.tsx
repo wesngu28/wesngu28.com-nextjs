@@ -1,26 +1,26 @@
-import Image from 'next/image';
-import useSWR from 'swr';
+import Image from 'next/image'
+import useSWR from 'swr'
 
 export default function NowPlaying() {
 
     const swrFetch = async (url: string) => {
         const songQuery = await fetch(url)
         const songJson = await songQuery.json()
-        return songJson;
+        return songJson
     }
 
     const { data, error } = useSWR('/api/spotify', swrFetch, {
         refreshInterval: 30000
-    });
+    })
 
     if (error) console.log(error)
 
     const trimText = (text: string) => {
         if (text.length > 34) {
-            text = text.substring(0, 34);
-            return `${text}...`;
+            text = text.substring(0, 34)
+            return `${text}...`
         }
-        return text;
+        return text
     }
 
     return (

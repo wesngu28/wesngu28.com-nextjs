@@ -1,14 +1,14 @@
-import Image, { StaticImageData } from "next/image";
-import { useState } from "react";
+import Image, { StaticImageData } from "next/image"
+import { useState } from "react"
 
 interface Props {
-    photos: StaticImageData[];
-    dynamicAlt: string[];
+    photos: StaticImageData[]
+    dynamicAlt: string[]
     caption?: Array<{
-        location: string;
-        duration: string;
-        title: string;
-    }>;
+        location: string
+        duration: string
+        title: string
+    }>
 }
 
 export default function Slideshow({ photos, dynamicAlt, caption }: Props) {
@@ -42,7 +42,7 @@ export default function Slideshow({ photos, dynamicAlt, caption }: Props) {
                         : null}
                         <Image alt={dynamicAlt.length > 1 ? dynamicAlt[i] : dynamicAlt[0]} key={i} src={photo} priority={true} className='object-contain' />
                      </div>
-                );
+                )
             })}
             <p onClick={incrementImage} className="text-6xl text-[#6E6E6E]">&#8594;</p>
         </div>

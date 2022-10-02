@@ -1,10 +1,10 @@
-import Map, { MapRef, Marker } from 'react-map-gl';
-import { useInView } from 'react-intersection-observer';
-import "mapbox-gl/dist/mapbox-gl.css";
-import { useRef } from 'react';
-import Link from 'next/link';
-import Chapter from './Chapter';
-import Image from 'next/image';
+import Map, { MapRef, Marker } from 'react-map-gl'
+import { useInView } from 'react-intersection-observer'
+import "mapbox-gl/dist/mapbox-gl.css"
+import { useRef } from 'react'
+import Link from 'next/link'
+import Chapter from './Chapter'
+import Image from 'next/image'
 import bellevueCollegeMapMarker from '../public/map/bc-logo.jpg'
 import uwMapMarker from '../public/map/uw-logo.png'
 import nhstcMapMarker from '../public/map/nhstc-marker.png'
@@ -12,7 +12,7 @@ import targetMapMarker from '../public/map/target-marker.jpg'
 import amazonFreshMapMarker from '../public/map/fresh-marker.png'
 
 export default function ScrollyMap() {
-    const mapRef = useRef<MapRef>(null);
+    const mapRef = useRef<MapRef>(null)
 
     const { ref: vietnam, inView: vietnamView } = useInView({ threshold: 0.25 })
     const { ref: bham, inView: bhamView } = useInView({ threshold: 0.25 })
@@ -90,7 +90,7 @@ export default function ScrollyMap() {
                 })
                 mapRef.current!.getMap().setStyle(locationConf.style ? locationConf.style : 'mapbox://styles/mapbox/dark-v10')
             }
-        });
+        })
     }
 
     return (
@@ -149,5 +149,5 @@ export default function ScrollyMap() {
                 </Map>
             </div>
         </div>
-    );
+    )
 }

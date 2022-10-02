@@ -1,11 +1,11 @@
-import Image from 'next/image';
-import useSWR from 'swr';
+import Image from 'next/image'
+import useSWR from 'swr'
 
 interface Artist {
-    name: string;
-    playcount: number;
-    href: string;
-    img: string;
+    name: string
+    playcount: number
+    href: string
+    img: string
 }
 
 export default function ArtistCard() {
@@ -13,12 +13,12 @@ export default function ArtistCard() {
     const swrFetch = async (url: string) => {
         const songQuery = await fetch(url)
         const songJson = await songQuery.json()
-        return songJson;
+        return songJson
     }
 
     const { data, error } = useSWR('/api/lastfm', swrFetch, {
         revalidateOnFocus: false, refreshInterval: 300000
-    });
+    })
 
     if (error) console.log(error)
 
@@ -31,7 +31,7 @@ export default function ArtistCard() {
                                 <Image className="m-auto" src={arr.img} alt={`${arr.name} icon from spotify`}title={`${arr.name} - ${arr.playcount} plays`} width={'160px'} height={'160px'}/>
                             </a>
                         </li>
-                    );
+                    )
                 }) : 'Loading top artists...'}
             </ul>
         )

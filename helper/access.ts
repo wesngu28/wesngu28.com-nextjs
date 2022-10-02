@@ -4,7 +4,7 @@ const {
     SPOTIFY_CLIENT_ID: clientID,
     SPOTIFY_CLIENT_SECRET: clientSecret,
     SPOTIFY_REFRESH_TOKEN: refreshToken,
-} = process.env;
+} = process.env
 
 const basicAuth = Buffer.from(`${clientID}:${clientSecret}`).toString('base64')
 
