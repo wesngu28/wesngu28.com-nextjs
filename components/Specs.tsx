@@ -40,13 +40,14 @@ export default function Specs() {
                         </div>
                         <div className="p-4 text-left text-xl leading-8">
                             <p>Displays</p>
-                            <ul>
-                                <li className="ml-10">1.  &nbsp; Alienware 3423dw</li>
-                                <li className="ml-10">2:  &nbsp; Acer XV272U</li>
-                                <li className="ml-10">3:  &nbsp; LG 27MP35HQ</li>
-                                <li className="ml-10">4:  &nbsp; Dell IN2020</li>
-                                <li className="ml-10">5:  &nbsp; Wixamit 10.1 inch</li>
-                            </ul>
+                            <ol className="list-decimal">
+                                <li className="ml-10">&nbsp; Alienware 3423dw</li>
+                                <li className="ml-10">&nbsp; Dell 2007wfp</li>
+                                <li className="ml-10">&nbsp; Wixamit 10.1 inch</li>
+                                <li className="ml-10">&nbsp; Acer XV272U</li>
+                                <li className="ml-10">&nbsp; Dell IN2020</li>
+                                <li className="ml-10">&nbsp; LG 27MP35HQ</li>
+                            </ol>
                         </div>
                     </div>
                     <div className="p-4 w-[75vw]">
