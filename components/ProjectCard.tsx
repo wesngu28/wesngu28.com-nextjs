@@ -6,14 +6,15 @@ interface Props {
     name: string
     desc: string
     url: string
+    live?: string
 }
 
-export default function ProjectCard({techs, image, name, desc, url}: Props) {
+export default function ProjectCard({ techs, image, name, desc, url, live }: Props) {
     return (
         <li className="p-4 bg-[#21222a] m-4 inline-block">
-            <a className="m-auto" target="_blank" href={url} rel="noopener noreferrer">
-                <Image alt={`${name} screenshot or related content if no screenshot makes sense`} src={image}/>
-            </a>
+            {live ? <a className="m-auto" target="_blank" href={live} rel="noopener noreferrer">
+                <Image alt={`${name} screenshot or related content if no screenshot makes sense`} src={image} />
+            </a> : <Image alt={`${name} screenshot or related content if no screenshot makes sense`} src={image} />}
             <div className={`pr-2 pl-2`}>
                 <ul className={'flex mt-2 justify-center flex-wrap'}>
                     {techs.map((arr, i) => {
