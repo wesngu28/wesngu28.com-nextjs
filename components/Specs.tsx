@@ -14,7 +14,7 @@ export default function Specs() {
                             <p>Laptop: <span className="text-green-300 ml-4 inline-block">HP Pavillion 15z-cw100 (openSuse Tumbleweed)</span></p>
                         </div>
                         <div className="p-4 text-left text-xl leading-8">
-                            <p>Development PC: <span className="text-sky-300 ml-4 inline-block">Dell Optiplex 3040 (Zorin)</span></p>
+                            <p>Development PC: <span className="text-green-300 ml-4 inline-block">Dell Optiplex 3040 (openSuse Tumbleweed)</span></p>
                         </div>
                         <div className="p-4 text-left text-xl leading-8">
                             <p>Android PC: <span className="text-blue-300 ml-4 inline-block">Dell Optiplex 3040 (BlissOS)</span></p>
