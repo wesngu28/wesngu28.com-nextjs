@@ -5,8 +5,8 @@ import Metadata from '../components/Metadata'
 const MapPage: NextPage = () => {
   return (
     <div>
-        <Metadata />
-        <Map />
+      <Metadata />
+      <Map />
     </div>
   )
 }
