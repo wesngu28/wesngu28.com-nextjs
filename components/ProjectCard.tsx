@@ -51,7 +51,7 @@ export default function ProjectCard({ techs, image, name, desc, url, live }: Pro
         />
       )}
       <div className="-my-2 w-full">
-        {data
+        {data && Object.keys(data).length > 0
           ? Object.keys(data).map(lang => {
               const divStyle = {
                 width: `${data[lang]}%`,
