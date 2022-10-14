@@ -19,7 +19,6 @@ const github = async (req: NextApiRequest, res: NextApiResponse) => {
   Object.keys(languages).forEach(language => {
     languages[language] = 100 * (languages[language] / lines)
   })
-  console.log(languages)
   return res.status(200).json(languages)
 }
 
