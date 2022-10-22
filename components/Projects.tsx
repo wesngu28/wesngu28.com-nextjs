@@ -7,7 +7,7 @@ import searchify from '../public/searchify.png'
 import translator from '../public/translator.png'
 import observatory from '../public/observatory.png'
 import glaceon from '../public/glaceons.png'
-import python from '../public/python.png'
+import lux from '../public/champview.png'
 
 export default function Projects() {
   return (
@@ -39,7 +39,7 @@ export default function Projects() {
           }
         />
         <ProjectCard
-          techs={['Typescript', 'Tailwind', 'React', 'Next.js', 'NPM']}
+          techs={['Typescript', 'Node.js', 'Tailwind', 'React', 'Next.js', 'NPM']}
           live={'https://observatories.vercel.app/'}
           url={'https://github.com/wesngu28/observatory'}
           image={observatory}
@@ -59,13 +59,13 @@ export default function Projects() {
           }
         />
         <ProjectCard
-          techs={['Typescript', 'Discord.js', 'MongoDB', 'Docker']}
-          live={'https://closurets.vercel.app/'}
-          url={'https://github.com/wesngu28/closurets'}
-          image={closure}
-          name={'Closure'}
+          techs={['Typescript', 'Vue', 'Nuxt.js']}
+          live={'https://simplechampview.vercel.app/'}
+          url={'https://github.com/wesngu28/simple-champion-viewer'}
+          image={lux}
+          name={'Champ Viewer'}
           desc={
-            'A discord bot with both general and niche applications. Made to complement the RhodesAPI. Implements operator commands, as well as commands to get live status for youtubers. Can be configured to announce Youtube livestreams and uploads at a comparable time to Pingcord.'
+            'A web app that allows you to query a champion and get their skins and spells, as well as other tidbits. Can be intensive for slower networks and is defaulted to Lux. Was made to learn a bit of Vue since I wanted to experience it a bit and got some Nuxt as a side dish.'
           }
         />
         <ProjectCard
@@ -78,7 +78,17 @@ export default function Projects() {
           }
         />
         <ProjectCard
-          techs={['HTML', 'CSS', 'Javascript']}
+          techs={['Typescript', 'Node.js', 'Discord.js', 'MongoDB', 'Docker']}
+          live={'https://closurets.vercel.app/'}
+          url={'https://github.com/wesngu28/closurets'}
+          image={closure}
+          name={'Closure'}
+          desc={
+            'A discord bot with both general and niche applications. Made to complement the RhodesAPI. Implements operator commands, as well as commands to get live status for youtubers. Can be configured to announce Youtube livestreams and uploads at a comparable time to Pingcord.'
+          }
+        />
+        <ProjectCard
+          techs={['Javascript', 'HTML', 'CSS']}
           live={'https://wesngu28.github.io/pokemon-regional-randomizer/'}
           url={'https://github.com/wesngu28/pokemon-regional-randomizer'}
           image={glaceon}
@@ -94,15 +104,6 @@ export default function Projects() {
           name={'Translatter'}
           desc={
             'A little Tkinter or Pysimplegui based Python app that allows you to paste in a foreign-language twitter and receive five tweets in a specified time frame back and the rest of them in csv format.'
-          }
-        />
-        <ProjectCard
-          techs={['Python']}
-          url={'https://github.com/wesngu28/consolidator'}
-          image={python}
-          name={'Consolidator'}
-          desc={
-            'One of the first things I wrote with Python that I still use regularly. Point a target folder to another folder to move all of its contents over.'
           }
         />
       </ul>
