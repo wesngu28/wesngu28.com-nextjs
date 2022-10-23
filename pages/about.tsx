@@ -29,7 +29,7 @@ export const AboutPage: NextPage<{ music: spotifyAPI; artists: Array<lastFMAPI> 
         paragraph1="If you clicked on this for whatever reason, have fun learning more about me than you should really know about me."
         destination="/"
       />
-      <Music spotify={music} lastfm={artists} />
+      <Music />
       <Games />
       <Specs />
       <Petfolio />
