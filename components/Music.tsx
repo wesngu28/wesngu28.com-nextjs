@@ -3,12 +3,7 @@ import { spotifyAPI } from '../models/spotifyAPI'
 import ArtistCard from './ArtistCard'
 import NowPlaying from './NowPlaying'
 
-interface Props {
-  spotify: spotifyAPI
-  lastfm: Array<lastFMAPI>
-}
-
-export default function Music({ spotify, lastfm }: Props) {
+export default function Music() {
   return (
     <div className="mb-20 flex w-[100vw] justify-evenly items-center flex-col md:flex-row relative">
       <div className="absolute top-0 left-0 overflow-hidden leading-none w-full">
@@ -26,11 +21,11 @@ export default function Music({ spotify, lastfm }: Props) {
         </svg>
       </div>
       <div className="mt-40 flex w-[75vw] justify-evenly items-center flex-col md:flex-row relative">
-        <NowPlaying ssrData={spotify} />
+        <NowPlaying />
         <ul className="flex flex-wrap justify-center m-4">
           <div>
             <p className="text-center mt-11 mb-5">My Top Artists This Month</p>
-            <ArtistCard ssrData={lastfm} />
+            <ArtistCard />
           </div>
         </ul>
       </div>
