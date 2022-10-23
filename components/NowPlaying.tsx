@@ -2,20 +2,15 @@ import Image from 'next/image'
 import useSWR from 'swr'
 import { spotifyAPI } from '../models/spotifyAPI'
 
-interface Props {
-  ssrData: spotifyAPI
-}
-
-export default function NowPlaying({ ssrData }: Props) {
+export default function NowPlaying() {
   const swrFetch = async (url: string) => {
     const songQuery = await fetch(url)
-    const songJson = await songQuery.json()
+    const songJson: spotifyAPI = await songQuery.json()
     return songJson
   }
 
   const { data, error } = useSWR('/api/spotify', swrFetch, {
     refreshInterval: 30000,
-    fallbackData: ssrData,
   })
 
   if (error) console.log(error)

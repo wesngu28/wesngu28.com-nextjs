@@ -3,11 +3,7 @@ import useSWR from 'swr'
 import { lastFMAPI } from '../models/lastFMAPI'
 import { Artist } from '../models/lastFMArtist'
 
-interface Props {
-  ssrData: Array<lastFMAPI>
-}
-
-export default function ArtistCard({ ssrData }: Props) {
+export default function ArtistCard() {
   const swrFetch = async (url: string) => {
     const songQuery = await fetch(url)
     const songJson: Array<lastFMAPI> = await songQuery.json()
@@ -16,8 +12,7 @@ export default function ArtistCard({ ssrData }: Props) {
 
   const { data, error } = useSWR('/api/lastfm', swrFetch, {
     revalidateOnFocus: false,
-    refreshInterval: 300000,
-    fallbackData: ssrData,
+    refreshInterval: 300000
   })
 
   if (error) console.log(error)
