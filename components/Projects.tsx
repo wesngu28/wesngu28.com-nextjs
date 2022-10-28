@@ -6,7 +6,7 @@ import closure from '../public/closure.png'
 import searchify from '../public/searchify.png'
 import translator from '../public/translator.png'
 import observatory from '../public/observatory.png'
-import glaceon from '../public/glaceons.png'
+import glaceon from '../public/pokemon.png'
 import lux from '../public/champview.png'
 
 export default function Projects() {
