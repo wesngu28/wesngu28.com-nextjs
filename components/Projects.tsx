@@ -49,6 +49,16 @@ export default function Projects() {
           }
         />
         <ProjectCard
+          techs={['Typescript', 'SvelteKit', 'Prisma', 'PostgreSQL', 'CockroachDB']}
+          live={'https://pokemon-stats-game.vercel.app/'}
+          url={'https://github.com/wesngu28/pokemon-stats-game'}
+          image={glaceon}
+          name={'Pokemon Stats Game'}
+          desc={
+            'First real web project I made that has since been reforged in SvelteKit. Allows you to search for a specific pokemon or query six random pokemon. Also has a challenge feature, in which you must choose the Pokemon that has the higher of the specified stat.'
+          }
+        />
+        <ProjectCard
           techs={['Typescript', 'Python', 'React', 'Next.js', 'Flask']}
           live={'https://searchifyy.vercel.app/'}
           url={'https://github.com/wesngu28/searchify'}
@@ -85,16 +95,6 @@ export default function Projects() {
           name={'Closure'}
           desc={
             'A discord bot with both general and niche applications. Made to complement the RhodesAPI. Implements operator commands, as well as commands to get live status for youtubers. Can be configured to announce Youtube livestreams and uploads at a comparable time to Pingcord.'
-          }
-        />
-        <ProjectCard
-          techs={['Javascript', 'HTML', 'CSS']}
-          live={'https://wesngu28.github.io/pokemon-regional-randomizer/'}
-          url={'https://github.com/wesngu28/pokemon-regional-randomizer'}
-          image={glaceon}
-          name={'Pokemon Region Randomizer'}
-          desc={
-            'First real web project I made. Simple html/css/javascript app that allows you to show 6 random pokemon from a specified region or the whole Pokedex.'
           }
         />
         <ProjectCard

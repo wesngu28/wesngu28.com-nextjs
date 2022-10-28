@@ -46,22 +46,24 @@ export default function Skills() {
             'skills/node.svg',
             'skills/React.svg',
             'skills/Svelte.svg',
+            'skills/vue.svg',
             'skills/next.svg',
+            'skills/nuxt.svg',
           ]}
           name={'Javascript'}
           desc={
-            'The various flavors of Javascript. I also know Vite and have worked a bit in SvelteKit.'
+            'The various flavors of Javascript, its frameworks, bundlers (Vite), and everything in-between.'
           }
         />
         <SkillCard
           images={['skills/python.svg', 'skills/flask.svg']}
           name={'Python'}
           desc={
-            'The language of data and AI. I have also used Jupyter. I have made guis with tkinter and pysimplegui.'
+            'The language of data and AI. I have also used Jupyter and the ML libaries to some extent.'
           }
         />
         <SkillCard
-          images={['skills/mongo.svg', 'skills/redis.svg']}
+          images={['skills/mongo.svg', 'skills/redis.svg', 'skills/cockroach.png']}
           name={'Databases'}
           desc={
             'Storage of data in the backend. I have worked with Postgres but have not used it in a project.'
