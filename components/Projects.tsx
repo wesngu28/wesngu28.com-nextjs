@@ -49,13 +49,13 @@ export default function Projects() {
           }
         />
         <ProjectCard
-          techs={['Typescript', 'SvelteKit', 'Prisma', 'PostgreSQL', 'CockroachDB']}
-          live={'https://pokemon-stats-game.vercel.app/'}
-          url={'https://github.com/wesngu28/pokemon-stats-game'}
+          techs={['Typescript', 'SvelteKit', 'Prisma', 'CockroachDB']}
+          live={'https://rustboro.vercel.app/'}
+          url={'https://github.com/wesngu28/rustboro'}
           image={glaceon}
-          name={'Pokemon Stats Game'}
+          name={'Rustboro Stats Game'}
           desc={
-            'First real web project I made that has since been reforged in SvelteKit. Allows you to search for a specific pokemon or query six random pokemon. Also has a challenge feature, in which you must choose the Pokemon that has the higher of the specified stat.'
+            'First real web project I made that has since been reforged in SvelteKit. Allows you to search for a specific pokemon or query six random pokemon. Also has a challenge feature, in which you must choose the Pokemon that has the higher of the specified stat. All the pokemon are stored in a CockroachDB instance.'
           }
         />
         <ProjectCard

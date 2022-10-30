@@ -20,7 +20,7 @@ export default function Skills() {
       <h1 className="mt-11  text-center text-2xl p-4 font-bold">Skills</h1>
       <ul className="flex flex-wrap justify-center p-4">
         <SkillCard
-          images={['skills/linux.svg', 'skills/git.svg', 'skills/docker.svg']}
+          images={['skills/linux.png', 'skills/git.svg', 'skills/docker.svg']}
           name={'Tools and Systems'}
           desc={
             'Operating systems and tools that help me run services and start new projects.'
@@ -56,7 +56,7 @@ export default function Skills() {
           }
         />
         <SkillCard
-          images={['skills/python.svg', 'skills/flask.svg']}
+          images={['skills/python.svg', 'skills/flask.png']}
           name={'Python'}
           desc={
             'The language of data and AI. I have also used Jupyter and the ML libaries to some extent.'
